@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>MapMyStore</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&family=DynaPuff:wght@400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Ephesis&family=Luckiest+Guy&family=Matemasie&family=Protest+Revolution&family=Rubik+Moonrocks&family=Ribeye&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+   
+
+    <!-- Icon Font Stylesheet -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet"> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <!-- <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet"> -->
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51" class="bg-white">
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0" id="home">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-6 py-2 py-lg-0">
+                <a href="#" class="navbar-brand d-flex align-items-center gap-2 p-0">
+<img src="img/main_logo.webp" alt="Logo" style="height: 100px !important; width: auto;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto py-0">
+                        <a href="#home" class="nav-item nav-link active" onclick="document.querySelector('.hero-header').scrollIntoView({behavior: 'smooth'})">Home</a>
+                        <a href="#about" class="nav-item nav-link" onclick="document.querySelector('#about').scrollIntoView({behavior: 'smooth'})">About</a>
+                        <a href="#speciality" class="nav-item nav-link" onclick="document.querySelector('#speciality').scrollIntoView({behavior: 'smooth'})">Why Us</a>
+                        <a href="#services" class="nav-item nav-link" onclick="document.querySelector('#services').scrollIntoView({behavior: 'smooth'})">Services</a>
+                        <a href="#pricing" class="nav-item nav-link" onclick="document.querySelector('#pricing').scrollIntoView({behavior: 'smooth'})">Pricing</a>
+                        <a href="#contact" class="nav-item nav-link" onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})">Contact</a>
+                    </div>
+                    <a href="#contact" class="btn btn-primary-gradient btn-glow py-2 px-4 ms-3 d-none d-lg-block" style="font-family: 'Merriweather'; border-radius: 13px !important;">Contact Us!</a>
+                </div>
+            </nav>
+
+            <div class=" bg-primary hero-header">
+                <div class="container px-lg-6">
+                    <div class="row g-5 ">
+                        <div class="col-lg-12 align-items-center">
+                        <p class="text-white pb-1 animated slideInDown"></p>
+<h2 class=" mb-4 animated slideInDown" id="home_name">360<sup style="font-size: 0.4em; vertical-align: super; margin-left: 2px;">&#176;</sup> Digital Growth Solutions</br>For Geo-Focused Businesses </h2>
+<!-- <h2 class=" mb-4 animated slideInDown" id="home_name">For Geo-Focused Businesses</h2> -->
+                            <p class="text-white pb-3 animated slideInDown" id = "tag_line">
+Be Seen Where Your Next Customer is Already Looking!</p>
+                            <a href="#about" class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill btn-glow me-3 animated slideInLeft" style = "font-family: 'Merriweather';border-radius: 13px !important;">Know More</a>
+                            <a href="#contact" class="btn btn-secondary-gradient py-sm-3 px-4 px-sm-5 rounded-pill btn-glow  animated slideInRight"style = "font-family: 'Merriweather';border-radius: 13px !important;">Contact Us</a>
+                        </div>
+                        <div class="col-lg-2 d-flex justify-content-center justify-content-lg-end wow fadeInUp placeholder-box" data-wow-delay="0.3s">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+
+        <!-- About Start -->
+        <div class="container-xxl py-5" id="about">
+            <div class="container py-5 px-lg-5">
+                <div class="row gy-5 gx-5 align-items-center">
+                    <div class="col-lg-6 wow fadeInUp pe-lg-5" data-wow-delay="0.1s">
+                        <h5 class="text-primary-gradient fw-medium">About Us</h5>
+                        <h1 class="mb-4">Hey there - we’re the MapMyStore crew</h1>
+                        <p class="mb-4" style ="text-align: justify;">MapMyStore is a <span class="highlight">360° Digital Solution</span> that’s designed to help businesses to grow in the digital age. MapMyStore is a partner that’s all about helping overlooked businesses shine online.
+                          MapMyStore was born out of a keen observation of local businesses, which are often overlooked or misrepresented on Google Maps. We’re on a mission to make sure these <span class="highlight">businesses get the visibility they deserve.</span>
+Whether you're a small shop or a multi-location brand, we make sure your business gets discovered by the people who need it most. 
+</p>
+<p>With deep expertise in <span class = "highlight">Google Business Profile (GMB) setup</span> and a background in Data Science, we craft high-performing, fully optimized listings using an <span class="highlight">AI-powered data-driven approach.</span> Every profile is tailored to reflect your business at its best — accurate, engaging, and built to rank.
+</p>
+<p class="text-center">At MapMyStore where help your business <span class = "highlight">Be seen where your next customer is already looking</span> </p>
+                        <!---<div class="row g-4 mb-4">
+                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
+                                <div class="d-flex">
+                                    <i class="fa fa-cogs fa-2x text-primary-gradient flex-shrink-0 mt-1"></i>
+                                    <div class="ms-3">
+                                        <h2 class="mb-0" data-toggle="counter-up">1234</h2>
+                                        <p class="text-primary-gradient mb-0">Active Install</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.7s">
+                                <div class="d-flex">
+                                    <i class="fa fa-comments fa-2x text-secondary-gradient flex-shrink-0 mt-1"></i>
+                                    <div class="ms-3">
+                                        <h2 class="mb-0" data-toggle="counter-up">1234</h2>
+                                        <p class="text-secondary-gradient mb-0">Clients Reviews</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>--->
+                        <a href="#speciality" class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill btn-glow mt-3" style = "border-radius: 13px !important;">Read More</a>
+                    </div>
+                    <div class="col-lg-5">
+                        <img class="img-fluid wow fadeInUp img-glow" data-wow-delay="0.5s" src="./img/logo2 (1).png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+
+        <!-- What we do -->
+        
+        <div class="container-xxl py-5">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <img class="img-fluid wow fadeInUp img-glow" data-wow-delay="0.1s" width="400" src="img/gprofile_views1.png">
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <h5 class="text-primary-gradient fw-medium">What we do</h5>
+                        <h1 class="mb-4">Make your business stand out, build trust and grow. </h1>
+                        <h3 class= "mb-4">End-to-End services to help your business shine online
+</h3>
+                        <p class="mb-4" style ="text-align: justify;"> At <span class="highlight">MapMyStore</span>, We begin with a powerful Google Business Profile that ensures your business is easily found by potential customers. From there, we support your growth with strategic services, including ongoing profile management, seasonal Google campaigns, data-driven analytics dashboards, multi-location handling, compelling content creation, brand design, website development, and social media management. 
+                         This ensures your business looks professional and performs consistently across every platform.</p>
+                         <p>Our goal is to ensure your business appears where your next customer is already searching.</p>
+                        <div class="row g-4">
+                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
+                                <a href="#services" class="d-flex align-items-center bg-primary-gradient rounded py-3 px-4">
+                                    <i class="fa fa-cogs fa-3x  text-white flex-shrink-0"></i>
+                                    <div class="ms-3">
+                                        <h5 class="text-white mb-0">See our services</h5>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.7s">
+                                <a href="#contact" class="d-flex align-items-center bg-secondary-gradient rounded py-3 px-4">
+                                    <i class="fa fa-comments fa-3x text-white flex-shrink-0"></i>
+                                    <div class="ms-3">
+                                        <!---<p class="text-white mb-0">Available On</p>--->
+                                        <h5 class="text-white mb-0">Get in touch</h5>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- What we do End -->
+         
+
+
+        <!--Why choose us Section start-->
+        
+        <div class="container my-5 px-4 choosesection bg-primary-gradient" id = "speciality">
+            
+            <div class="text-center mb-5">
+               <h5 class=" fw-medium " id = "speciality-header">Why Choose Us</h5> 
+                <p class="text-light">We empower your business with tools and insights to stand out in local search.</p>
+              </div>
+            <div class="row">
+              <!-- Left Column -->
+              <div class="col-md-6">
+                <div class="d-flex mb-4 wow fadeInUp glass-card w-100" data-wow-delay="0.1s">
+                  <div class="me-3">
+                    <div class="bg-primary-gradient icon-circle animated slideInDown">
+                      <i class="bi bi-google"></i> <!-- Bootstrap Icons -->
+                    </div>
+                  </div>
+                  <div>
+                    <h5 class="fw-bold">GMB Experts</h5>
+                    <p class="text-muted">Experts in creating & optimizing Google Business Profiles for local growth.
+</p>
+                  </div>
+                </div>
+          
+                <div class="d-flex mb-4 wow fadeInUp glass-card w-100"  data-wow-delay="0.1s">
+                  <div class="me-3">
+                    <div class="bg-primary-gradient icon-circle">
+                      <i class="bi bi-openai" style ="color: white;"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h5 class="fw-bold">Customized Strategies</h5>
+                    <p class="text-muted">Smarter optimization with customized strategies that keep your profile ahead of the curve.</p>
+                  </div>
+                </div>
+          
+                <div class="d-flex mb-4 wow fadeInUp glass-card w-100"  data-wow-delay="0.1s">
+                  <div class="me-3">
+                    <div class="bg-primary-gradient icon-circle">
+                      <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h5 class="fw-bold">Custom Branding</h5>
+                    <p class="text-muted">Visuals and content designed to reflect your unique brand identity.
+</p>
+                  </div>
+                </div>
+                <div class="d-flex mb-4 wow fadeInUp glass-card w-100"  data-wow-delay="0.1s">
+                  <div class="me-3">
+                    <div class="bg-primary-gradient icon-circle">
+                      <i class="bi bi-box-fill"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h5 class="fw-bold">All-in-One Package</h5>
+                    <p class="text-muted">Everything your store needs to stand out—handled under one roof.</p>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Right Column -->
+              <div class="col-md-6">
+                <div class="d-flex mb-4 wow fadeInUp glass-card w-100"  data-wow-delay="0.1s">
+                  <div class="me-3">
+                    <div class="bg-primary-gradient icon-circle">
+                      <i class="bi bi-person-badge"></i>
+                    </div>
+                  </div>
+                  <div class="animated slideInDown">
+                    <h5 class="fw-bold">Worked with 15+ brands</h5>
+                    <p class="text-muted">Proven results with thousands of leads across managed profiles</p>
+                  </div>
+                </div>
+
+                <div class="d-flex mb-4 wow fadeInUp glass-card w-100"  data-wow-delay="0.1s">
+                  <div class="me-3">
+                    <div class="bg-primary-gradient icon-circle">
+                      <i class="bi bi-image"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h5 class="fw-bold">High-Impact Visuals</h5>
+                    <p class="text-muted">Eye-catching photos and videos that make your business pop on Maps.</p>
+                  </div>
+                </div>
+          
+                <div class="d-flex mb-4 wow fadeInUp glass-card w-100"  data-wow-delay="0.1s">
+                  <div class="me-3">
+                    <div class="bg-primary-gradient icon-circle">
+                      <i class="bi bi-bar-chart-fill"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h5 class="fw-bold">Insightful Data Analysis</h5>
+                    <p class="text-muted"> Clear, actionable analytics to measure and boost performance.</p>
+                  </div>
+                </div>
+          
+                
+                <div class="d-flex mb-4 wow fadeInUp glass-card w-100"  data-wow-delay="0.1s">
+                  <div class="me-3">
+                    <div class="bg-primary-gradient icon-circle">
+                      <i class="bi bi-calendar4-range"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h5 class="fw-bold">End-to-End Support</h5>
+                    <p class="text-muted"> We take care of everything, from launch to long-term growth.
+</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+        <!---Why choose us Section End-->
+
+
+        <!-- Why Choose us -->
+        <!-- <div class="container-xxl py-5">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5 align-items-center">
+                    
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <h5 class="text-primary-gradient fw-medium">Why Choose Us</h5>
+                        <h1 class="mb-4">4M+ Views on Google Maps | Google Local Guide (Level 7)</h1>
+                        <p class="mb-4" style ="text-align: justify;">With years of hands-on experience in Google My Business (GMB) optimization, we've helped local businesses gain over 4+ million views on Google Maps. As a trusted Google Local Guide (Level 7), we know exactly how to position your business for maximum visibility. </br>
+
+Our in-depth understanding of GMB best practices ensures your profile is not just listed — it’s fully optimized, engaging, and built to convert searches into customers.
+
+</p>
+                        <div class="row g-4">
+                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
+                                <a href="" class="d-flex align-items-center bg-primary-gradient rounded py-3 px-4">
+                                    <i class="fa fa-cogs fa-3x  text-white flex-shrink-0"></i>
+                                    <div class="ms-3">
+                                        <h5 class="text-white mb-0">See our services</h5>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.7s">
+                                <a href="" class="d-flex align-items-center bg-secondary-gradient rounded py-3 px-4">
+                                    <i class="fa fa-comments fa-3x text-white flex-shrink-0"></i>
+                                    <div class="ms-3">
+                                        <p class="text-white mb-0">Available On</p>
+                                        <h5 class="text-white mb-0">Get in touch</h5>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <img class="img-fluid wow fadeInUp img-glow" data-wow-delay="0.1s" src="img/gprofile_views.png">
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Why Choose us End -->
+         <!-- Services Section Start -->
+<!-- <div class="container-xxl py-5" id="services">
+  <div class="container py-5 px-lg-5">
+    <div class="text-center pb-4">
+      <h5 class="text-primary-gradient fw-medium">What we Offer</h5>
+      <h1 class="mb-5 ">Explore the services provided by us</h1>
+    </div>
+    <div class="row gy-5 gx-4 justify-content-center"> -->
+      <!-- Card 1 -->
+      <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+        
+                <div class="service-card bg-light rounded p-4 h-100">
+                  <div class="mb-3 text-center">
+                    <span class="icon-circle">
+                      <i class="fa fa-camera-retro"></i>
+                    </span>
+                  </div>
+                  <h5 class="mt-4 mb-2 headline">Google Business Profile (GBP)-related services</h5>
+                  <p>Personalized photography and professional-grade video editing to elevate your shop's appeal.</p>
+                  <ul>
+                    <li>On-site photo shoot</li>
+                    <li>Professional video editing</li>
+                    <li>Brand-consistent visuals</li>
+                  </ul>
+                  <a href="#" class="btn btn-link p-0 mt-auto headlink">Click to know more <i class="fa fa-arrow-right"></i></a>
+                </div>
+            </div>
+           -->
+      <!-- Card 2 -->
+      <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+        
+                <div class="service-card bg-light rounded p-4 h-100">
+                  <div class="mb-3 text-center">
+                    <span class="icon-circle">
+                      <i class="fa fa-camera-retro"></i>
+                    </span>
+                  </div>
+                  <h5 class="mt-4 mb-2 headline">Content Creation & Visual Design</h5>
+                  <p>Content that tells your story and makes your brand unforgettable.</p>
+                  <ul>
+                    <li>SEO-Optimized GBP Posts</li>
+                    <li>Social Media Posts/Captions</li>
+                    <li>Product/Service Descriptions</li>
+                    <li>Festival, Oﬀer & Event Content</li>
+                  </ul>
+                  <p class= "headline">Why it matters</p>
+                  <a href="#" class="btn btn-link p-0 mt-auto headlink">Click to know more <i class="fa fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+           -->
+
+      <!-- Card 3 -->
+      <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="service-card bg-light rounded p-4 h-100">
+          <div class="mb-3">
+            <span class="icon-circle">
+            <i class="fa fa-paint-brush" ></i>
+            </span>
+          </div>
+          <h5 class="mt-4 mb-2 headline">Custom Branding</h5>
+          <p>Build a tailored brand identity for your business to stand out and thrive in a competitive market.</p>
+          <ul>
+            <li>Logo & color palette</li>
+            <li>Brand messaging</li>
+            <li>Consistent visuals</li>
+          </ul>
+          <a href="#" class="btn btn-link p-0 mt-auto headlink">Click to know more <i class="fa fa-arrow-right"></i></a>
+        </div>
+      </div> -->
+
+      <!-- Card 4 -->
+      <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="service-card bg-light rounded p-4 h-100">
+          <div class="mb-3">
+            <span class="icon-circle">
+            <i class="fa fa-pen-nib "></i>
+            </span>
+        
+          </div>
+          <h5 class="mt-4 mb-2 headline">Content Creation</h5>
+          <p>Create impactful, customized content that connects with your audience and strengthens your brand presence.</p>
+          <ul>
+            <li>SEO-optimized posts</li>
+            <li>Engaging copywriting</li>
+            <li>Regular updates</li>
+          </ul>
+          <a href="#" class="btn btn-link p-0 mt-auto headlink">Click to know more <i class="fa fa-arrow-right"></i></a>
+        </div>
+      </div> -->
+      <!-- Card 5 -->
+      <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="service-card bg-light rounded p-4 h-100">
+          <div class="mb-3">
+            <span class="icon-circle">
+            <i class="fa fa-chart-line" ></i>
+            </span>
+          </div>
+          <h5 class="mt-4 mb-2 headline">Analytics & Insights</h5>
+          <p>Track your store’s performance and get actionable insights to grow your business.</p>
+          <ul>
+            <li>Monthly reports</li>
+            <li>Competitor analysis</li>
+            <li>Growth recommendations</li>
+          </ul>
+          <a href="#" class="btn btn-link p-0 mt-auto headlink">Click to know more <i class="fa fa-arrow-right"></i></a>
+        </div>
+      </div> -->
+      <!-- Card 6 -->
+      <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="service-card bg-light rounded p-4 h-100">
+          <div class="mb-3">
+            <span class="icon-circle">
+            <i class="fa fa-headset" ></i>
+            </span>
+          </div>
+          <h5 class="mt-4 mb-2 headline">Support & Maintenance</h5>
+          <p>Get help anytime with our 24/7 customer support and ongoing profile maintenance.</p>
+          <ul>
+            <li>Live chat & email</li>
+            <li>Profile updates</li>
+            <li>Issue resolution</li>
+          </ul>
+          <a href="#" class="btn btn-link p-0 mt-auto headlink">Click to know more <i class="fa fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- Services Section End -->
+
+<!---Carousel Start-->
+<div class="my-5 text-center container" id = "services">
+   <div class="row mb-2">
+      
+   </div>
+   
+   <div class="row d-flex align-items-center">
+    <div class="text-center pb-4">
+      <h5 class="text-primary-gradient fw-medium">What we Offer</h5>
+      <h1 class="mb-5 ">Explore the services provided by us</h1>
+    </div>
+      <div class="col-1 d-flex align-items-center justify-content-center">
+         <a href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+            <div class="carousel-nav-icon">
+               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <path d="m88.6,121.3c0.8,0.8 1.8,1.2 2.9,1.2s2.1-0.4 2.9-1.2c1.6-1.6 1.6-4.2 0-5.8l-51-51 51-51c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-54,53.9c-1.6,1.6-1.6,4.2 0,5.8l54,53.9z"/>
+               </svg>
+            </div>
+         </a>
+      </div>
+      <div class="col-10">
+         <!--Start carousel-->
+         <div id="carouselExampleIndicators" class="carousel slide" style="position: relative;">
+            <div class="carousel-inner wow fadeInUp" data-wow-delay="0.1s">
+              <!-- Slide 1: Card 1, 2, 3 -->
+              <div class="carousel-item active " >
+                <div class="row justify-content-center" style = "padding: 1rem;">
+                  <div class="col-12 col-lg-4 d-flex align-items-stretch mb-4 mb-lg-0 " >
+                    <div class="service-card bg-light rounded p-4 h-100 w-100" onclick="window.location.href='subpages/index.html'" style="cursor: pointer;">
+                      <div class="mb-3 text-center">
+                        <span class="icon-circle">
+                          <i class="fa-brands fa-google"></i>
+                        </span>
+                      </div>
+                      <h5 class="mt-4 mb-2 text-start headline">Google Business Profile (GBP)-related services</h5>
+                      <p class=" text-start">Personalized photography and professional-grade video editing to elevate your shop's appeal.</p>
+                      <ul class= "text-start purple-bullets">
+                        <li>On-site photo shoot</li>
+                        <li>Professional video editing</li>
+                        <li>Brand-consistent visuals</li>
+                      </ul>
+                      <a href="#" class="btn btn-link p-0 mt-auto headlink text-start">Click to know more <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-4 d-flex align-items-stretch mb-4 mb-lg-0 " >
+                    <div class="service-card bg-light rounded p-4 h-100 w-100">
+                      <div class="mb-3 text-center">
+                        <span class="icon-circle">
+                          <i class="fa fa-camera-retro"></i>
+                        </span>
+                      </div>
+                      <h5 class="mt-4 mb-2 headline text-start">Content Creation & Visual Design</h5>
+                      <p class="text-start">Content that tells your story and makes your brand unforgettable.</p>
+                      <ul class="text-start purple-bullets">
+                        <li>SEO-Optimized GBP Posts</li>
+                        <li>Social Media Posts/Captions</li>
+                        <li>Product/Service Descriptions</li>
+                        <li>Festival, Oﬀer & Event Content</li>
+                      </ul>
+                      <p class= "headlinesub text-start">Why it matters</p>
+                      <p class="text-start">Great content = stronger brand + better engagement.</p>
+                      <p class= "headlinesub text-start">How we position this</p>
+                      <p class="text-start">“From words to visuals, we speak your brand
+fluently.”</p>
+                      <a href="#" class="btn btn-link p-0 mt-auto headlink">Click to know more <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-4 d-flex align-items-stretch " >
+                    <div class="service-card bg-light rounded p-4 h-100 w-100">
+                      <div class="mb-3">
+                        <span class="icon-circle">
+                        <i class="fa fa-paint-brush" ></i>
+                        </span>
+                      </div>
+                      <h5 class="mt-4 mb-2 headline text-start">Graphic Design for Digital Presence</h5>
+                      <p class="text-start">Designs that make your business look professional, modern, and
+memorable.</p>
+                      <ul class="text-start purple-bullets">
+                        <li>Social Media Posts (IG, FB, LinkedIn)</li>
+                        <li>Employee Birthday/Celebration Posts</li>
+                        <li>Infographics & Tips</li>
+                        <li>Testimonial & Quote Cards</li>
+                      </ul>
+                      <p class= "headlinesub text-start">Why it matters</p>
+                      <p class="text-start">Design leaves a lasting impression.</p>
+                      <p class= "headlinesub text-start">How we position this</p>
+                      <p class="text-start">“Look like a brand people trust - every time they
+scroll.”</p>
+                      <a href="#" class="btn btn-link p-0 mt-auto headlink">Click to know more <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 2: Card 4, 5, 6 -->
+              <div class="carousel-item " >
+                <div class="row justify-content-center" style = "padding: 1rem;">
+                  <div class="col-12 col-lg-4 d-flex align-items-stretch mb-4 mb-lg-0">
+                    <div class="service-card bg-light rounded p-4 h-100 w-100">
+                      <div class="mb-3">
+                        <span class="icon-circle">
+                        <i class="fa-solid fa-database"></i>
+                        </span>
+                      </div>
+                      <h5 class="mt-4 mb-2 headline text-start">Data Science for Local Business Growth</h5>
+                      <p class = "text-start">We use data to guide, improve, and accelerate your business growth.</p>
+                      <ul class="text-start purple-bullets">
+                        <li>Customer Behavior Analytics</li>
+                        <li>Sentiment Analysis of Reviews</li>
+                        <li>Predictive Posting Insights</li>
+                        <li>Content Performance Analysis</li>
+                        <li>Competitor Profiling</li>
+                        <li>Visual Dashboards (Looker Studio, Power BI)</li>
+                      </ul>
+                      <p class= "headlinesub text-start">Why it matters</p>
+                      <p class="text-start">Smarter decisions. Faster growth.</p>
+                      <p class= "headlinesub text-start">How we position this</p>
+                      <p class="text-start">“We don’t guess what works - we prove it.”</p>
+                      <a href="#" class="btn btn-link p-0 mt-auto headlink">Click to know more <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-4 d-flex align-items-stretch mb-4 mb-lg-0">
+                    <div class="service-card bg-light rounded p-4 h-100 w-100">
+                      <div class="mb-3">
+                        <span class="icon-circle">
+                        <i class="fa-brands fa-facebook"></i>
+                        </span>
+                      </div>
+                      <h5 class="mt-4 mb-2 headline text-start">Social Media Cross-Promotion</h5>
+                      <p class = "text-start">Extend your Google content reach across major social platforms.</p>
+                      <ul class="text-start purple-bullets">
+                        <li>Repurpose Google Posts for Instagram/Facebook/LinkedIn</li>
+                        <li>Content Format Customization</li>
+                        <li>Hashtag & Caption Strategy</li>
+                      </ul>
+                      <p class= "headlinesub text-start">Why it matters</p>
+                      <p class="text-start">Consistency builds recognition and trust.</p>
+                      <p class= "headlinesub text-start">How we position this</p>
+                      <p class="text-start">“One post, multiple platforms - maximum reach.”</p>
+                      <a href="#" class="btn btn-link p-0 mt-auto headlink">Click to know more <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-4 d-flex align-items-stretch">
+                    <div class="service-card bg-light rounded p-4 h-100 w-100">
+                      <div class="mb-3">
+                        <span class="icon-circle">
+                        <i class="fa-solid fa-palette"></i>
+                        </span>
+                      </div>
+                      <h5 class="mt-4 mb-2 headline text-start">Custom Branding Design</h5>
+                      <p class = "text-start">Create a brand identity that stays consistent across all platforms.</p>
+                      <ul class="text-start purple-bullets">
+                        <li>Logo, Color Palette, Font Selection</li>
+                        <li>Brand Guidelines</li>
+                      </ul>
+                      <p class= "headlinesub text-start">Why it matters</p>
+                      <p class="text-start">People remember brands, not listings.</p>
+                      <p class= "headlinesub text-start">How we position this</p>
+                      <p class="text-start">“Design that delivers trust at every touchpoint.”</p>
+                      <a href="#" class="btn btn-link p-0 mt-auto headlink">Click to know more <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 3: Card 7, 8, 9 -->
+              <div class="carousel-item">
+                <div class="row justify-content-center" style = "padding: 1rem;">
+                  <div class="col-12 col-lg-4 d-flex align-items-stretch mb-4 mb-lg-0">
+                    <div class="service-card bg-light rounded p-4 h-100 w-100">
+                      <div class="mb-3 text-center">
+                        <span class="icon-circle">
+                          <i class="fa fa-lightbulb"></i>
+                        </span>
+                      </div>
+                      <h5 class="mt-4 mb-2 text-start headline">Local Brand Strategy Consulting</h5>
+                      <p class="text-start">Position your business to win locally with expert guidance.</p>
+                      <ul class="text-start purple-bullets">
+                        <li>Photo & Service Naming Strategy</li>
+                        <li>Review Tone & Response Coaching</li>
+                        <li>Google Business Profile Bio & Highlights Advice</li>
+                      </ul>
+                      <p class= "headlinesub text-start">Why it matters</p>
+                      <p class="text-start">Small shifts = big diﬀerences in local reach.</p>
+                      <p class= "headlinesub text-start">How we position this</p>
+                      <p class="text-start">“We turn local knowledge into local dominance.”</p>
+                      <a href="#" class="btn btn-link p-0 mt-auto headlink text-start">Click to know more <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-4 d-flex align-items-stretch mb-4 mb-lg-0">
+                    <div class="service-card bg-light rounded p-4 h-100 w-100">
+                      <div class="mb-3 text-center">
+                        <span class="icon-circle">
+                         <i class="fa-solid fa-laptop-code"></i>
+                        </span>
+                      </div>
+                      <h5 class="mt-4 mb-2 headline text-start">Website for Small Businesses</h5>
+                      <p class="text-start">A simple, modern website built to match your Google profile and drive
+action.</p>
+                      <ul class="text-start purple-bullets">
+                        <li>Mobile-Friendly Landing Page</li>
+                        <li>Service & Contact Info Sync with Google Business Profile</li>
+                        <li>Action-Driven CTA Buttons (Call, WhatsApp, Book Now)</li>
+                        <li>Basic SEO Setup</li>
+                      </ul>
+                      <p class= "headlinesub text-start">Why it matters</p>
+                      <p class="text-start">A website boosts credibility and captures more leads. For
+local businesses, your website is often the first deep impression. It tells your
+full story, builds instant credibility, and guides visitors to take action —
+whether booking a service or making a call. In today’s search-first world, a
+GBP without a matching site leaves opportunities on the table.</p>
+                      <p class= "headlinesub text-start">How we position this</p>
+                      <p class="text-start">“From search to site - we’ve got your digital journey
+covered.”</p>
+                      <a href="#" class="btn btn-link p-0 mt-auto headlink">Click to know more <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-4 d-flex align-items-stretch">
+                    <div class="service-card bg-light rounded p-4 h-100 w-100">
+                      <div class="mb-3 text-center">
+                        <span class="icon-circle">
+                          <i class="fa-solid fa-photo-film"></i>
+                        </span>
+                      </div>
+                      <h5 class="mt-4 mb-2 headline text-start">Social Media Handling & Management</h5>
+                      <p class="text-start">Professional handling of your social media - keeping it active, aligned,
+and aesthetically pleasing.</p>
+                      <ul class="text-start purple-bullets">
+                        <li>Profile Setup & Optimization</li>
+                        <li>Branded Post Design (Festivals, Milestones, Promotions, etc.)</li>
+                        <li>Scheduled Posting (as per your preferred calendar)</li>
+                        <li>Caption Writing & Hashtag Suggestions</li>
+                        <li>Highlight Cover & Story Templates</li>
+                        <li>Chat Management & Messaging Strategy</li>
+                      </ul>
+                      <p class= "headlinesub text-start">Why it matters</p>
+                      <p class="text-start">People remember brands, not listings.</p>
+                      <p class= "headlinesub text-start">How we position this</p>
+                      <p class="text-start">“Design that delivers trust at every touchpoint.”</p>
+                      <a href="#" class="btn btn-link p-0 mt-auto headlink">Click to know more <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Carousel indicators (dots) -->
+            <div class="carousel-indicators" style="position: absolute; bottom: -30px; left: 0; right: 0; margin: auto;">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+         </div>
+         <!--End carousel-->
+      </div>
+      <div class="col-1 d-flex align-items-center justify-content-center"><a  href="#carouselExampleIndicators" data-bs-slide="next">
+         <div class="carousel-nav-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink">
+               <path d="m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z"/>
+            </svg>
+         </div>
+         </a>
+      </div>
+   </div>
+</div>
+ 
+
+        
+
+        
+
+        
+
+        <!-- Pricing Start -->
+        <div class="container-xxl py-5" id="pricing">
+            <div class="container py-5 px-lg-5">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="text-primary-gradient fw-medium">Packages</h5>
+                    <h1 class="mb-5">Choose Your Package</h1>
+                </div>
+                <div class="tab-class text-center pricing wow fadeInUp" data-wow-delay="0.1s">
+                    <ul class="nav nav-pills d-inline-flex justify-content-center bg-primary-gradient rounded-pill mb-5">
+                        <li class="nav-item">
+                            <button class="nav-link active" data-bs-toggle="pill" href="#tab-1">Visual Boost</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" data-bs-toggle="pill" href="#tab-2">GMB Essential</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content text-start">
+                        <div id="tab-1" class="tab-pane fade show p-0 active">
+                            <div class="row g-4">
+                                <div class="col-lg-4">
+                                    <div class="bg-light rounded">
+                                        <div class="border-bottom p-4 mb-4">
+                                            <h4 class="text-primary-gradient mb-1">Basic</h4>
+                                            <span>High Quality photos & Videos</span>
+                                        </div>
+                                        <div class="p-4 pt-0">
+                                            <h1 class="mb-3">
+                                                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>14.99<small
+                                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
+                                            </h1>
+                                            <div class="d-flex justify-content-between mb-3"><span>Under Construction</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <!-- <div class="d-flex justify-content-between mb-3"><span>Under Construction</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>Under Construction</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>Under Construction</span><i class="fa fa-check text-primary-gradient pt-1"></i></div> -->
+                                            <a href="" class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">Get Started</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="bg-light rounded border">
+                                        <div class="border-bottom p-4 mb-4">
+                                            <h4 class="text-primary-gradient mb-1">GMB Essentials Package</h4>
+                                            <span>Complete GMB Profile Setup</span>
+                                        </div>
+                                        <div class="p-4 pt-0">
+                                            <h1 class="mb-3">
+                                                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>24.99<small
+                                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
+                                            </h1>
+                                            <div class="d-flex justify-content-between mb-3"><span>Under Construction</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <!-- <div class="d-flex justify-content-between mb-3"><span>Under Construction</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>Under Construction</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>Under Construction</span><i class="fa fa-check text-primary-gradient pt-1"></i></div> -->
+                                            <a href="" class="btn btn-secondary-gradient rounded-pill py-2 px-4 mt-4">Get Started</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="bg-light rounded">
+                                        <div class="border-bottom p-4 mb-4">
+                                            <h4 class="text-primary-gradient mb-1">GMB Premium Package</h4>
+                                            <span>Premium GMB Profile Setup</span>
+                                        </div>
+                                        <div class="p-4 pt-0">
+                                            <h1 class="mb-3">
+                                                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>34.99<small
+                                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
+                                            </h1>
+                                            <div class="d-flex justify-content-between mb-3"><span>Under Construction</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <!-- <div class="d-flex justify-content-between mb-3"><span>Under Construction</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>Under Construction</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>Under Construction</span><i class="fa fa-check text-primary-gradient pt-1"></i></div> -->
+                                            <a href="" class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">Get Started</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-2" class="tab-pane fade p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-4">
+                                    <div class="bg-light rounded">
+                                        <div class="border-bottom p-4 mb-4">
+                                            <h4 class="text-primary-gradient mb-1">Starter Plan</h4>
+                                            <span>Powerful & Awesome Features</span>
+                                        </div>
+                                        <div class="p-4 pt-0">
+                                            <h1 class="mb-3">
+                                                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>114.99<small
+                                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Yearly</small>
+                                            </h1>
+                                            <div class="d-flex justify-content-between mb-3"><span>Under Construction</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <!-- <div class="d-flex justify-content-between mb-3"><span>Under Construction</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>Under Construction</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>Under Construction</span><i class="fa fa-check text-primary-gradient pt-1"></i></div> -->
+                                            <a href="" class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">Get Started</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="bg-light rounded border">
+                                        <div class="border-bottom p-4 mb-4">
+                                            <h4 class="text-primary-gradient mb-1">Advance Plan</h4>
+                                            <span>Powerful & Awesome Features</span>
+                                        </div>
+                                        <div class="p-4 pt-0">
+                                            <h1 class="mb-3">
+                                                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>124.99<small
+                                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Yearly</small>
+                                            </h1>
+                                            <div class="d-flex justify-content-between mb-3"><span>Under Construction</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <!-- <div class="d-flex justify-content-between mb-3"><span>Under Construction</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>Under Construction</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>Under Construction</span><i class="fa fa-check text-primary-gradient pt-1"></i></div> -->
+                                            <a href="" class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">Get Started</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="bg-light rounded">
+                                        <div class="border-bottom p-4 mb-4">
+                                            <h4 class="text-primary-gradient mb-1">Premium Plan</h4>
+                                            <span>Powerful & Awesome Features</span>
+                                        </div>
+                                        <div class="p-4 pt-0">
+                                            <h1 class="mb-3">
+                                                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>134.99<small
+                                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Yearly</small>
+                                            </h1>
+                                            <div class="d-flex justify-content-between mb-3"><span>Under Construction</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <!-- <div class="d-flex justify-content-between mb-3"><span>Under Construction</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>Under Construction</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>Under Construction</span><i class="fa fa-check text-primary-gradient pt-1"></i></div> -->
+                                            <a href="" class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">Get Started</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Pricing End -->
+</div>
+        
+         <div class="new-section">
+        <section class="section">
+      <div class="tag">BUSINESS-CRITICAL INFORMATION</div>
+      <h1>What Every Business Owner <span>MUST Know</span></h1>
+      <p class="description">Master these insights to grow with confidence, or risk being left behind while competitors win your customers</p>
+      <div class="cards">
+        <div class="card">
+          <div class="badge urgent">URGENT</div>
+          <div class="card-icon bg-danger"><i class="fa fa-arrow-trend-down"></i></div>
+          <h3>The REAL Cost of Not Being #1 on Google</h3>
+          <p>Discover the shocking amount of money your business loses every single day by not ranking first</p>
+          <p class="highlight">Most businesses lose $50,000+ annually</p>
+          <a href="#">Learn More →</a>
+        </div>
+        <div class="card critical" onclick="window.location.href='blog/blog2.html'" style="cursor: pointer;">
+          <div class="badge critical-badge">CRITICAL</div>
+          <div class="card-icon bg-warning"><i class="fa fa-exclamation-triangle"></i></div>
+          <h3>7 Mistakes Keeping Your Business Invisible on Google</h3>
+          <p>Learn about these rank killers that silently push you off Google—and cost you customers every single day</p>
+          <p class="highlight">95% of local businesses make these mistakes</p>
+          <a href="blog/blog2.html">Learn More →</a>
+        </div>
+        <div class="card solution">
+          <div class="badge solution-badge">SOLUTION</div>
+          <div class="card-icon bg-success"><i class="fa fa-bolt"></i></div>
+          <h3>Google Business Profile Optimization</h3>
+          <p>The game-changing strategy that puts you ahead of competitors and captures local customers</p>
+          <p class="highlight">97% success rate in 30 days</p>
+          <a href="#">Learn More →</a>
+        </div>
+      </div>
+      <div class="cta">
+        <strong>Is MapMyStore Right for You?</strong> 
+        <p>If you serve local customers, want more visibility on Google, and need a better online-first impression, then YES.</p>
+        <button>Get My Competitive Analysis Now</button>
+      </div>
+    </section>
+    </div>
+
+
+        <!-- Testimonial Start -->
+        <!-- <div class="container-xxl py-5" id="review">
+            <div class="container py-5 px-lg-5">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="text-primary-gradient fw-medium">Testimonial</h5>
+                    <h1 class="mb-5">What Say Our Clients!</h1>
+                </div>
+                <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="testimonial-item rounded p-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <img class="img-fluid bg-white rounded flex-shrink-0 p-1" src="img/testimonial-1.jpg" style="width: 85px; height: 85px;">
+                            <div class="ms-4">
+                                <h5 class="mb-1">Client Name</h5>
+                                <p class="mb-1">Profession</p>
+                                <div>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0">Please provide your valuable feedback for our upscaling</p>
+                    </div>
+                    <div class="testimonial-item rounded p-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <img class="img-fluid bg-white rounded flex-shrink-0 p-1" src="img/testimonial-2.jpg" style="width: 85px; height: 85px;">
+                            <div class="ms-4">
+                                <h5 class="mb-1">Client Name</h5>
+                                <p class="mb-1">Profession</p>
+                                <div>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0">Please provide your valuable feedback for our upscaling</p>
+                    </div>
+                    <div class="testimonial-item rounded p-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <img class="img-fluid bg-white rounded flex-shrink-0 p-1" src="img/testimonial-3.jpg" style="width: 85px; height: 85px;">
+                            <div class="ms-4">
+                                <h5 class="mb-1">Client Name</h5>
+                                <p class="mb-1">Profession</p>
+                                <div>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0">Please provide your valuable feedback for our upscaling</p>
+                    </div>
+                    <div class="testimonial-item rounded p-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <img class="img-fluid bg-white rounded flex-shrink-0 p-1" src="img/testimonial-4.jpg" style="width: 85px; height: 85px;">
+                            <div class="ms-4">
+                                <h5 class="mb-1">Client Name</h5>
+                                <p class="mb-1">Profession</p>
+                                <div>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0">Please provide your valuable feedback for our upscaling</p>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Testimonial End -->
+
+
+        <!-- Features Start -->
+        <!-- <div class="container-xxl py-5" id="feature">
+            <div class="container py-5 px-lg-5">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="text-primary-gradient fw-medium">App Features</h5>
+                    <h1 class="mb-5">Awesome Features</h1>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="feature-item bg-light rounded p-4">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
+                                <i class="fa fa-eye text-white fs-4"></i>
+                            </div>
+                            <h5 class="mb-3">High Resolution</h5>
+                            <p class="m-0">Under Construction:)</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="feature-item bg-light rounded p-4">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
+                                <i class="fa fa-layer-group text-white fs-4"></i>
+                            </div>
+                            <h5 class="mb-3">Retina Ready</h5>
+                            <p class="m-0">Under Construction:)</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="feature-item bg-light rounded p-4">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
+                                <i class="fa fa-edit text-white fs-4"></i>
+                            </div>
+                            <h5 class="mb-3">Editable Data</h5>
+                            <p class="m-0">Under Construction:)</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="feature-item bg-light rounded p-4">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
+                                <i class="fa fa-shield-alt text-white fs-4"></i>
+                            </div>
+                            <h5 class="mb-3">Fully Secured</h5>
+                            <p class="m-0">Under Construction:)</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="feature-item bg-light rounded p-4">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
+                                <i class="fa fa-cloud text-white fs-4"></i>
+                            </div>
+                            <h5 class="mb-3">Cloud Storage</h5>
+                            <p class="m-0">Under Construction:)</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="feature-item bg-light rounded p-4">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
+                                <i class="fa fa-mobile-alt text-white fs-4"></i>
+                            </div>
+                            <h5 class="mb-3">Fully Responsive</h5>
+                            <p class="m-0">Under Construction:)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Features End -->
+
+
+        <!-- Screenshot Start -->
+        <!-- <div class="container-xxl py-5">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.1s">
+                        <h5 class="text-primary-gradient fw-medium">Screenshot</h5>
+                        <h1 class="mb-4">User Friendly interface And Very Easy To Use Fitness App</h1>
+                        <p class="mb-4">Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit clita duo justo eirmod magna dolore erat amet</p>
+                        <p><i class="fa fa-check text-primary-gradient me-3"></i>Diam dolor diam ipsum et tempor sit</p>
+                        <p><i class="fa fa-check text-primary-gradient me-3"></i>Aliqu diam amet diam et eos labore</p>
+                        <p class="mb-4"><i class="fa fa-check text-primary-gradient me-3"></i>Clita erat ipsum et lorem et sit</p>
+                        <a href="" class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill mt-3">Read More</a>
+                    </div>
+                    <div class="col-lg-4 d-flex justify-content-center justify-content-lg-end wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="owl-carousel screenshot-carousel">
+                            <img class="img-fluid" src="img/screenshot-1.png" alt="">
+                            <img class="img-fluid" src="img/screenshot-2.png" alt="">
+                            <img class="img-fluid" src="img/screenshot-3.png" alt="">
+                            <img class="img-fluid" src="img/screenshot-4.png" alt="">
+                            <img class="img-fluid" src="img/screenshot-5.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Screenshot End -->
+
+        <!-- FAQ Section Start -->
+<div class="container-xxl py-5" id="faq">
+    <div class="text-center pb-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="m-5 mb-2 text-primary-gradient fw-medium">FAQ Section</h5>
+                    <h1 class="mb-3 ">Get your doubts clarified</h1>
+                </div>
+  <div class="container py-5 px-lg-5">
+    
+    <div class="row">
+      <!-- Sidebar Categories -->
+      <div class="col-lg-3 mb-4 mb-lg-0">
+        <div class="faq-sidebar rounded p-3">
+          <h5 class=" mb-4">FAQ Categories</h5>
+          <ul class="nav flex-column faq-categories">
+          
+            <li class="nav-item">
+              <button class="nav-link active" style = "color: rgba(0, 0, 0, 0.636);" data-category="general">General</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link " style = "color: rgba(0, 0, 0, 0.636);" data-category="google">Google Listing</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link " style = "color: rgba(0, 0, 0, 0.636);" data-category="services">Services</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" style = "color: rgba(0, 0, 0, 0.636);" data-category="pricing">Pricing</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" style = "color: rgba(0, 0, 0, 0.636);" data-category="support">Support</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- FAQ Content -->
+      <div class="col-lg-9">
+        <div class="faq-content">
+          
+          <!-- General -->
+          <div class="faq-category" data-category="general">
+            <h4 class="mb-4 text-primary-gradient">General Questions</h4>
+            <div class="faq-item mb-3">
+              <button class="faq-question">
+                <span class="faq-icon">
+    <i class="fa fa-question"></i>
+  </span>
+  What is MapMyStore?</button>
+              <div class="faq-answer">We’re a 360° digital solution that’s designed to help businesses like yours grow in the digital age. We offer end-to-end services to help your business shine online.</div>
+            </div>
+            <div class="faq-item mb-3">
+              <button class="faq-question">
+                <span class="faq-icon">
+    <i class="fa fa-question"></i>
+  </span>
+                Who can use MapMyStore services?</button>
+              <div class="faq-answer">Local clinics, hospitals, salons, gyms, repair shops, boutiques, grocery stores, restaurants, cafes, cloud kitchens, bakeries, event planners, franchise chains, growing startups and all the businesses that want to take their online presence to the next level.</div>
+            </div>
+          </div>
+          <!-- Google Listing -->
+          <div class="faq-category d-none" data-category="google">
+            <h4 class="mb-4 text-primary-gradient">Google Listing</h4>
+            <div class="faq-item mb-3">
+              <button class="faq-question">
+                <span class="faq-icon">
+    <i class="fa fa-question"></i>
+  </span>
+  Why Google Maps Business Listing is important? </button>
+              <div class="faq-answer">It makes your business visible when local customers search for products or services near them. It boosts local SEO, builds trust with reviews and photos, and drives direct actions like calls, visits, and website clicks—helping you attract more ready-to-buy customers in your area.</div>
+            </div>
+            <div class="faq-item mb-3">
+              <button class="faq-question">
+                <span class="faq-icon">
+    <i class="fa fa-question"></i>
+  </span>
+                How do I create and claim my Google business profile?</button>
+              <div class="faq-answer">Visit Google's Business Profile Manager, sign in with your business mail id, provide the accurate details with proper services selected and up-to-date contact information for profile creation. Visit our GMB related services for further details </div>
+            </div>
+            <div class="faq-item mb-3">
+              <button class="faq-question">
+                <span class="faq-icon">
+    <i class="fa fa-question"></i>
+  </span>
+                Is profile management a necessity alongside business listing?</button>
+              <div class="faq-answer"><strong>Business Listing</strong>  → This is the public-facing entry on Google Search & Maps. It shows your business name, address, phone number, website, hours, reviews, and photos. Basically, it’s your online storefront.
+              </br>
+<strong>Profile Management </strong>→ This is the ongoing process of keeping that listing accurate and optimized. It includes updating info, adding posts/photos, responding to reviews, tracking insights, and improving visibility.
+            </br>
+            Having a listing is like putting your shop on the map.
+Managing it is like keeping the shop clean, welcoming, and stocked—so customers actually come in.  
+</div>
+</div>
+<div class="faq-item mb-3">
+              <button class="faq-question">
+                <span class="faq-icon">
+    <i class="fa fa-question"></i>
+  </span>
+                Do Customer review impact my google listing?</button>
+              <div class="faq-answer">Yes, They do highly influence your ranking on Maps/Search, build trust and credibility, and directly affect whether people choose your business over competitors. More positive, recent reviews = better visibility and higher customer confidence. </div>
+            </div>
+
+<div class="faq-item mb-3">
+              <button class="faq-question">
+                <span class="faq-icon">
+    <i class="fa fa-question"></i>
+  </span>
+                Do I need a Google Business Profile specialist to rank higher on Google Maps?</button>
+              <div class="faq-answer">Not necessarily, but having a specialist can make a big difference. While you focus on running your business, a professional like us takes care of the technical, SEO, and ongoing optimization—keeping your profile updated, competitive, and ranking higher on Google Maps so your customers can find you.</div>
+            </div>
+</div>
+          
+          <!-- Services -->
+          <div class="faq-category d-none" data-category="services">
+            <h4 class="mb-4 text-primary-gradient">Services</h4>
+            <div class="faq-item mb-3">
+              <button class="faq-question">
+                <span class="faq-icon">
+    <i class="fa fa-question"></i>
+  </span>
+  Can I have my exisiting GMB profile optimized?</button>
+              <div class="faq-answer">Yes, we set up and fine-tune your Google profile for maximum local visibility. We also provide a Profile Audit & Performance Review before and after optimization. Explore our GBP related services to know better</div>
+            </div>
+            <div class="faq-item mb-3">
+              <button class="faq-question">
+                <span class="faq-icon">
+    <i class="fa fa-question"></i>
+  </span>
+                Do my Google Business Profile need regular updates?</button>
+              <div class="faq-answer">Yes, that plays a vital role in Google's algorithm to get listed at top. Simply creating a profile isn’t enough—Google favors businesses that stay active. Frequent updates like posting offers, adding fresh photos, adjusting business hours, and responding to reviews signal that your business is reliable and engaged. An active profile not only ranks higher on Google Maps but also builds trust with potential customers.</div>
+            </div>
+            <div class="faq-item mb-3">
+              <button class="faq-question">
+                <span class="faq-icon">
+    <i class="fa fa-question"></i>
+  </span>
+                How often should I update my Google Maps listing to stay visible?</button>
+              <div class="faq-answer">Updating your profile once every 7 days is ideal. Adding fresh posts, photos, or small updates weekly keeps your business active in Google’s eyes and helps you stay ahead of competitors.</div>
+            </div>
+          </div>
+          <!-- Pricing -->
+          <div class="faq-category d-none" data-category="pricing">
+            <h4 class="mb-4 text-primary-gradient">Pricing</h4>
+            <div class="faq-item mb-3">
+              <button class="faq-question">
+                <span class="faq-icon">
+    <i class="fa fa-question"></i>
+  </span>
+                How much do your packages cost?</button>
+              <div class="faq-answer">We have flexible packages starting from $14.99/month. See our Pricing section for details.</div>
+            </div>
+            <div class="faq-item mb-3">
+              <button class="faq-question">
+                <span class="faq-icon">
+    <i class="fa fa-question"></i>
+  </span>
+                Are there any hidden fees?</button>
+              <div class="faq-answer">No, all pricing is transparent and there are no hidden charges.</div>
+            </div>
+          </div>
+          <!-- Support -->
+          <div class="faq-category d-none" data-category="support">
+            <h4 class="mb-4 text-primary-gradient">Support</h4>
+            <div class="faq-item mb-3">
+              <button class="faq-question">
+                <span class="faq-icon">
+    <i class="fa fa-question"></i>
+  </span>
+                How do I get support?</button>
+              <div class="faq-answer">You can contact us anytime via email or the contact form. We offer 24/7 support for all clients.</div>
+            </div>
+            <div class="faq-item mb-3">
+              <button class="faq-question">
+                <span class="faq-icon">
+    <i class="fa fa-question"></i>
+  </span>
+                Do you provide ongoing maintenance?</button>
+              <div class="faq-answer">Yes, ongoing profile maintenance and updates are included in our support packages.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FAQ Section End -->
+
+        <!-- Contact Start -->
+        <div class="container-xxl py-5" id="contact">
+            <div class="container py-5 px-lg-5">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="text-primary-gradient fw-medium">Contact Us</h5>
+                    <h1 class="mb-5">Get In Touch!</h1>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-9">
+                        <div class="wow fadeInUp" data-wow-delay="0.3s">
+                            <form id="contactForm">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
+                                            <label for="name">Your Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" id="email" name="email" placeholder="Your Email">
+                                            <label for="email">Your Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
+                                            <label for="subject">Subject</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" placeholder="Leave a message here" id="message" name="message" style="height: 150px"></textarea>
+                                            <label for="message">Message</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 text-center">
+                                        <button class="btn btn-primary-gradient rounded-pill py-3 px-5" type="submit">Send Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact End -->
+        
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-3">
+                        <a href="#" class="d-flex align-items-center mb-4">
+                            <img src="img/main_logo.webp" alt="Logo" style="height: 50px; width: auto;">
+                        </a>
+                        <p class="mb-4">Elevating presence through our grand growth suite</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social me-2" href="#"><i class="fab fa-facebook"></i></a>
+                            <a class="btn btn-outline-light btn-social me-2" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h4 class="text-white mb-4">Quick Links</h4>
+                        <a class="btn btn-link text-light" href="#home">Home</a>
+                        <a class="btn btn-link text-light" href="#about">About</a>
+                        <a class="btn btn-link text-light" href="#services">Services</a>
+                        <a class="btn btn-link text-light" href="#speciality">Why Us</a>
+                        <a class="btn btn-link text-light" href="#contact">Contact</a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h4 class="text-white mb-4">Our Services</h4>
+                        <a class="btn btn-link text-light" href="#">GBP Optimization</a>
+                        <a class="btn btn-link text-light" href="#">Content Creation</a>
+                        <a class="btn btn-link text-light" href="#">Brand Strategy</a>
+                        <a class="btn btn-link text-light" href="#">Social Media Management</a>
+                        <a class="btn btn-link text-light" href="#">Analytics & Insights</a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h4 class="text-white mb-4">Contact Info</h4>
+                        <p><i class="fa fa-envelope me-3"></i>connect@mapmystore.com</p>
+                        <p><i class="fa fa-phone me-3"></i>+91 7358588788</p>
+                        <p><i class="fa fa-map-marker-alt me-3"></i>Chennai, India</p>
+                        <div class="mt-4">
+                            <h6 class="text-white mb-3">Stay Updated</h6>
+                            <div class="position-relative">
+                                <input class="form-control bg-transparent text-light border" type="email" placeholder="Your email">
+                                <button type="button" class="btn btn-light position-absolute top-0 end-0">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-6 col-lg-3">
+                        <h4 class="text-white mb-4">Quick Link</h4>
+                        <a class="btn btn-link" href="">About Us</a>
+                        <a class="btn btn-link" href="">Contact Us</a>
+                        <a class="btn btn-link" href="">Privacy Policy</a>
+                        <a class="btn btn-link" href="">Terms & Condition</a>
+                        <a class="btn btn-link" href="">Career</a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h4 class="text-white mb-4">Popular Link</h4>
+                        <a class="btn btn-link" href="">About Us</a>
+                        <a class="btn btn-link" href="">Contact Us</a>
+                        <a class="btn btn-link" href="">Privacy Policy</a>
+                        <a class="btn btn-link" href="">Terms & Condition</a>
+                        <a class="btn btn-link" href="">Career</a>
+                    </div> -->
+                    <!-- <div class="col-md-6 col-lg-3">
+                        <h4 class="text-white mb-4">Newsletter</h4>
+                        <p>Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulpu</p>
+                        <div class="position-relative w-100 mt-3">
+                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Your Email" style="height: 48px;">
+                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary-gradient fs-4"></i></button>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <!-- <div class="container px-lg-5">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.  -->
+              
+              <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+              <!-- Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="">Home</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <!-- Notification Popup -->
+<div id="consultationPopup" class="popup">
+  <span class="popup-text">💬 Book a free consultation call now!</span>
+</div>
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up text-white"></i></a>
+
+        <div id="customToast" style="
+  position: fixed;
+  top: 30px;                 /* Move toast to top */
+  left: 50%;                /* Center horizontally */
+  transform: translateX(-50%);
+  background: #6f42c1;
+  color: white;
+  padding: 16px 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: none;
+  z-index: 9999;
+  font-family: 'Arial', sans-serif;
+">
+  Message sent successfully!
+</div>
+
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const form = document.getElementById("contactForm");
+      const formData = new FormData(form);
+
+      fetch("https://script.google.com/macros/s/AKfycbzI2jTeJFWpGilqrLFHD4H277jkVqX8xSOA8y3tba6IrV_3CgQJRXlRdn-gYbWKzKZoLA/exec", {
+        method: "POST",
+        body: formData
+      })
+      .then(response => response.text())
+      .then(result => {
+        // Show custom popup toast at the top
+        const toast = document.getElementById("customToast");
+        toast.style.display = "block";
+
+        setTimeout(() => { 
+          toast.style.display = "none"; 
+        }, 3000);
+
+        form.reset();
+      })
+      .catch(error => {
+        console.error("Error:", error);
+        alert("Something went wrong.");
+      });
+    });
+  });
+
+    document.addEventListener("DOMContentLoaded", () => {
+    const popup = document.getElementById("consultationPopup");
+
+    // Scroll to contact form
+    popup.addEventListener("click", () => {
+      document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+    });
+
+    // Function to show popup
+    function showPopup() {
+      popup.classList.add("show");
+      playSound();
+
+      // Hide after 5 seconds
+      setTimeout(() => {
+        popup.classList.remove("show");
+        popup.style.display = "none";
+        scheduleNextPopup();
+      }, 10000);
+    }
+
+    // Function to schedule popup at random intervals
+    function scheduleNextPopup() {
+      const interval = Math.floor(Math.random() * 20000) + 20000; // 20s - 40s
+      setTimeout(() => {
+        popup.style.display = "block";
+        showPopup();
+      }, interval);
+    }
+
+    // Start popup cycle
+    scheduleNextPopup();
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+  // Category switching
+  document.querySelectorAll('.faq-categories .nav-link').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.faq-categories .nav-link').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const cat = btn.getAttribute('data-category');
+      document.querySelectorAll('.faq-category').forEach(c => {
+        c.classList.toggle('d-none', c.getAttribute('data-category') !== cat);
+      });
+    });
+  });
+
+  // FAQ expand/collapse
+  document.querySelectorAll('.faq-question').forEach(function(q) {
+    q.addEventListener('click', function() {
+      q.classList.toggle('open');
+    });
+  });
+});
+
+
+</script>
+
+
+
+</body>
+
+</html>
