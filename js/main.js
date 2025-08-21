@@ -66,6 +66,37 @@
     // Services Carousel Configuration
     const carousel = document.getElementById('carouselExampleIndicators');
     if (carousel) {
+        // Function to update carousel based on screen size
+        function updateCarouselForScreenSize() {
+            const isMobile = window.innerWidth < 768;
+            const slides = carousel.querySelectorAll('.carousel-item');
+            
+            slides.forEach(slide => {
+                const row = slide.querySelector('.row');
+                const cards = row.querySelectorAll('.col-lg-4');
+                
+                if (isMobile) {
+                    // On mobile, show one card at a time
+                    cards.forEach((card, index) => {
+                        if (index > 0) {
+                            card.style.display = 'none';
+                        } else {
+                            card.style.display = 'block';
+                        }
+                    });
+                } else {
+                    // On desktop, show all cards
+                    cards.forEach(card => {
+                        card.style.display = 'block';
+                    });
+                }
+            });
+        }
+
+        // Update on load and resize
+        updateCarouselForScreenSize();
+        window.addEventListener('resize', updateCarouselForScreenSize);
+
         carousel.addEventListener('slide.bs.carousel', function (e) {
             const slides = this.querySelectorAll('.carousel-item');
             const totalSlides = slides.length;
@@ -87,6 +118,21 @@
         });
     }
 
+
+    // Handle flip card touch events
+    document.querySelectorAll('.flip-card').forEach(card => {
+        card.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+            this.classList.toggle('touched');
+        });
+        
+        // Reset card on touch outside
+        document.addEventListener('touchstart', function(e) {
+            if (!card.contains(e.target)) {
+                card.classList.remove('touched');
+            }
+        });
+    });
 
     // Screenshot carousel
     $(".screenshot-carousel").owlCarousel({

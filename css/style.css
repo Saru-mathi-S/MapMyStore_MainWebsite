@@ -500,6 +500,17 @@ background-position: center;
     padding-right: 0;
     border-right: none;
 }
+  
+#home_name{
+    /* font-family: "Protest Revolution", sans-serif; */
+    font-family:  "Merriweather", serif;
+  /* font-weight: 100; */
+  font-style: normal;
+  font-size: 4rem;
+  color:rgba(255, 255, 255, 0.818);
+  /* letter-spacing: 1px; */
+  margin-top:2rem;
+}
 
 .placeholder-box {
     min-height: 200px;
@@ -523,7 +534,7 @@ background-position: center;
 
   @media (min-width: 577px) and (max-width: 768px) {
     #home_name {
-      font-size: 70px;
+      font-size: 50px;
       text-align: center;
     }
   
@@ -539,17 +550,7 @@ background-position: center;
 
   
 
-  
-#home_name{
-    /* font-family: "Protest Revolution", sans-serif; */
-    font-family:  "Merriweather", serif;
-  /* font-weight: 100; */
-  font-style: normal;
-  font-size: 4rem;
-  color:rgba(255, 255, 255, 0.818);
-  /* letter-spacing: 1px; */
-  margin-top:2rem;
-}
+
 
 #tag_line{
     font-family:"Merriweather", serif;
@@ -597,6 +598,38 @@ background-position: center;
     box-shadow: 0 0 35px rgb(140, 102, 215);
     transform: scale(1.05);
   }
+
+  /* Mobile-only button styles (below 576px) */
+  @media (max-width: 575.98px) {
+    .btn-glow {
+      min-width: 200px;
+      padding: 12px 24px;
+      font-size: 16px;
+      display: block;
+      margin: 10px auto;
+    }
+
+    /* Center buttons container on mobile only */
+    .hero-header .d-flex.flex-column {
+      text-align: center;
+      width: 100%;
+    }
+    
+    /* Reset flex layout for larger screens */
+    .hero-header .flex-sm-row {
+      flex-direction: column !important;
+    }
+  }
+
+  /* Reset to original layout for tablets and up (576px and above) */
+  @media (min-width: 576px) {
+    .hero-header .d-flex {
+      text-align: left;
+    }
+    .btn-glow {
+      margin: 0;
+    }
+  }
   .parallax-section {
     background-image: linear-gradient(rgba(0, 0, 0, 0.759), rgba(0, 0, 0, 0.579)), url('../img/samplebg2.jpg');
     min-height: 80vh;
@@ -631,7 +664,7 @@ background-position: center;
 
   @media (max-width: 1400px){
     #home_name {
-        font-size: 80px;
+        font-size: 60px;
         
       }
     
@@ -923,6 +956,23 @@ background-position: center;
   animation: slideUpFadeIn 0.8s cubic-bezier(.34,1.56,.64,1) forwards;
 }
 
+/* Custom carousel responsive styles */
+@media (max-width: 767.98px) {
+  #services .carousel-item .row {
+    flex-direction: column;
+  }
+  #services .carousel-item .col-lg-4:not(:first-child) {
+    display: none;
+  }
+  #services .carousel-item .col-lg-4 {
+    width: 100%;
+    padding: 0 1rem;
+  }
+  #services .service-card {
+    margin-bottom: 0;
+  }
+}
+
 @keyframes slideUpFadeIn {
   to {
     opacity: 1;
@@ -1132,6 +1182,7 @@ background-position: center;
   width: 100%;
   height: 100%;
   perspective: 1000px;
+  cursor: pointer;
 }
 .flip-card-inner {
   position: relative;
@@ -1140,7 +1191,16 @@ background-position: center;
   transition: transform 0.6s cubic-bezier(.4,2,.6,1);
   transform-style: preserve-3d;
 }
-.flip-card:hover .flip-card-inner,
+/* Desktop hover */
+@media (hover: hover) {
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+}
+/* Mobile touch */
+.flip-card.touched .flip-card-inner {
+  transform: rotateY(180deg);
+}
 .flip-card:focus-within .flip-card-inner {
   transform: rotateY(180deg);
 }
@@ -1150,6 +1210,7 @@ background-position: center;
   height: 100%;
   backface-visibility: hidden;
   top: 0; left: 0;
+  -webkit-backface-visibility: hidden; /* Safari support */
 }
 .flip-card-front {
   z-index: 2;
@@ -1157,7 +1218,7 @@ background-position: center;
 .flip-card-back {
   transform: rotateY(180deg);
   z-index: 1;
-  background: #fff; /* or match your card background */
+  background: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
