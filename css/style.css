@@ -266,7 +266,7 @@ h6,
 /*** Hero Header ***/
 .hero-header {
     margin-bottom: 0rem;
-    padding: 14rem 0 0 0;
+    padding: 13rem 0 10rem 0;
     background:
     url('../img/Home_BG.png');
 background-size: cover;
@@ -282,6 +282,7 @@ background-position: center;
 @media (max-width: 991.98px) {
     .hero-header {
         padding: 6rem 0 9rem 0;
+        
     }
 }
 
@@ -523,7 +524,7 @@ background-position: center;
   
   @media (max-width: 576px) {
     #home_name {
-      font-size: 50px; /* Scaled down */
+      font-size: 30px; /* Scaled down */
       text-align: center;
     }
   
@@ -706,8 +707,11 @@ background-position: center;
 
   @media screen and (max-width: 767px) {
   #home_name {
-    font-size: 50px;
+    font-size: 40px;
     text-align: center;
+  }
+  .hero-header{
+    padding: 8rem 0 5rem 0 !important;
   }
 
   #tag_line {
