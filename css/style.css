@@ -149,31 +149,36 @@ h6,
 .navbar-light .navbar-nav .nav-link {
     position: relative;
     margin-right: 25px;
-    padding: 45px 0;
+    padding: 40px 0;
     font-family: "Merriweather", serif;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
     color: var(--light) !important;
     outline: none;
     transition: .5s;
 }
 
-.navbar-light .navbar-nav .nav-link::before {
+    .navbar-light .navbar-nav .nav-link::before {
     position: absolute;
     content: "";
     width: 0;
     height: 0;
-    top: -10px;
+    top: -15px;
     left: 50%;
     transform: translateX(-50%);
-    border: 10px solid;
+    border: 15px solid;
     border-color: var(--light) transparent transparent transparent;
-    transition: .5s;
+    transition: all .5s ease;
 }
 
-.sticky-top.navbar-light .navbar-nav .nav-link {
+.sticky-top.navbar-light .navbar-nav .nav-link::before {
+    border-width: 10px;
+    top: -15px;
+}.sticky-top.navbar-light .navbar-nav .nav-link {
     padding: 20px 0;
     color: var(--dark) !important;
+    font-size: 16px; /* Smaller font size when sticky */
+    transition: all .5s ease;
 }
 
 .navbar-light .navbar-nav .nav-link:hover::before,
@@ -1183,38 +1188,45 @@ background-position: center;
   height: 100%;
   perspective: 1000px;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
+
 .flip-card-inner {
   position: relative;
   width: 100%;
   height: 100%;
   transition: transform 0.6s cubic-bezier(.4,2,.6,1);
   transform-style: preserve-3d;
+  will-change: transform;
 }
-/* Desktop hover */
-@media (hover: hover) {
+
+/* Desktop hover - only apply hover on devices that support it */
+@media (hover: hover) and (pointer: fine) {
   .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
   }
 }
-/* Mobile touch */
-.flip-card.touched .flip-card-inner {
+
+/* Mobile and touch devices */
+.flip-card.is-flipped .flip-card-inner {
   transform: rotateY(180deg);
 }
-.flip-card:focus-within .flip-card-inner {
-  transform: rotateY(180deg);
-}
+
 .flip-card-front, .flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  top: 0; left: 0;
-  -webkit-backface-visibility: hidden; /* Safari support */
+  top: 0;
+  left: 0;
+  transform-style: preserve-3d;
 }
+
 .flip-card-front {
   z-index: 2;
 }
+
 .flip-card-back {
   transform: rotateY(180deg);
   z-index: 1;
@@ -1222,6 +1234,13 @@ background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .flip-card-inner {
+    transition: none;
+  }
 }
 
 .carousel-nav-icon {

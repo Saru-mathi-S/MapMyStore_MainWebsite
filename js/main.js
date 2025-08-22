@@ -33,7 +33,7 @@
             
             $('html, body').animate({
                 scrollTop: $(this.hash).offset().top - 45
-            }, 300, 'easeInOutExpo');
+            }, 200, 'linear');
             
             if ($(this).parents('.navbar-nav').length) {
                 $('.navbar-nav .active').removeClass('active');
@@ -119,19 +119,42 @@
     }
 
 
-    // Handle flip card touch events
+    // Handle flip card interactions for both touch and click
     document.querySelectorAll('.flip-card').forEach(card => {
-        card.addEventListener('touchstart', function(e) {
+        function toggleFlip(e) {
             e.preventDefault();
-            this.classList.toggle('touched');
-        });
+            card.classList.toggle('is-flipped');
+        }
+
+        // Handle both click and touch events
+        card.addEventListener('click', toggleFlip);
+        card.addEventListener('touchstart', toggleFlip, { passive: false });
         
-        // Reset card on touch outside
-        document.addEventListener('touchstart', function(e) {
+        // Reset card on interaction outside
+        document.addEventListener('click', function(e) {
             if (!card.contains(e.target)) {
-                card.classList.remove('touched');
+                card.classList.remove('is-flipped');
             }
         });
+        
+        document.addEventListener('touchstart', function(e) {
+            if (!card.contains(e.target)) {
+                card.classList.remove('is-flipped');
+            }
+        }, { passive: true });
+
+        // Add keyboard support
+        card.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                card.classList.toggle('is-flipped');
+            }
+        });
+
+        // Make cards focusable
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('role', 'button');
+        card.setAttribute('aria-label', 'Tap to flip card');
     });
 
     // Screenshot carousel

@@ -31,6 +31,32 @@
 
     <!-- Template Stylesheet -->
     <link href="../css/style.css" rel="stylesheet">
+    <style>
+      .flip-card {
+  perspective: 1000px;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner,
+.flip-card.flip-active .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+    </style>
 </head>
 <body>
     
@@ -46,24 +72,26 @@
             <div class="container py-5 px-lg-5">
                 <div class="text-center pb-4 wow fadeInUp" data-wow-delay="0.1s">
                     <h5 class="text-primary-gradient fw-medium">What we Offer</h5>
-                    <h1 class="mb-5 parallax-text">Explore the Google Business Profile (GBP)-related services</h1>
+                    <h1 class="mb-5 parallax-text">Explore the Google Business Profile (GBP) related services</h1>
                 </div>
-                <div class="row gy-5 gx-4 justify-content-center" style="--bs-gutter-y: 3rem;">
-                    <div class="col-lg-4 col-sm-6 text-center  pt-4  wow fadeInUp" data-wow-delay="0.1s">
-                      <div class="flip-card">
+                <div class="row gy-5 gx-4 justify-content-center" style="--bs-gutter-y: 5rem;">
+                    
+                    <div class="col-lg-4 col-sm-6 text-center mb-5  pt-4 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="flip-card">
                         <div class="flip-card-inner">
                           <div class="flip-card-front">
-                            <div class="position-relative feature-item bg-light rounded pt-5 pb-4 px-4">
+                            <div class="position-relative feature-item bg-light rounded pt-5 pb-4 px-4 ">
                                 <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px;">
                                     <i class="fab fa-google fs-1 text-white"></i>
                                 </div>
-                                <h5 class="mt-4 mb-3 headline">Google Business Profile Setup & Optimization</h5>
+                                <h5 class="mt-4 mb-3 headline">Google Business Profile </br> Setup & Optimization</h5>
     <p class="mb-0 text-start">Set up and fine-tune your Google profile for maximum local visibility.</p>
                                 <ul class="text-start mt-3 purple-bullets">
                                   <li >Profile Creation & Verification</li>
                                   <li>Category & Location Optimization</li>
-                                  <li>Business Hours, Description, Services, Products</li>
+                                  <li>Business Hours, Services & Products Listing</li>
                                   <li>NAP Consistency Check</li>
+                                  <li>SEO Optimized Description</li>
                                 </ul>
                             </div>
                           </div>
@@ -73,30 +101,33 @@
                                     <i class="fab fa-google fs-1 text-white"></i>
                                 </div>
                                   <h5 class="mt-4 mb-3 headline text-start">Why it matters:</h5>
-                                      <p class="mb-0 text-start">Your Google Business Profile is the first impression. Let’s
-                                  make it count.</p>
+                                      <p class="mb-0 text-start">Your Google Business Profile is the First Impression. Let’s
+                                  Make it Count.</p>
                                   <h5 class="mt-4 mb-3 headline text-start">How we position this:</h5>
-                                      <p class="mb-0 text-start">“Your storefront online - built to bring in real-world customers.”</p>  
+                                      <p class="mb-0 text-start">“Your Storefront Online, Built to Bring in Real-World Customers.”</p>    
                                 </div>  
                             </div>
                       </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.1s">
+
+                    <div class="col-lg-4 col-sm-6 text-center mb-5  pt-4 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="flip-card">
                         <div class="flip-card-inner">
                           <div class="flip-card-front">
-                            <div class="position-relative feature-item bg-light rounded pt-5 pb-4 px-4">
+                            <div class="position-relative feature-item bg-light rounded pt-5 pb-4 px-4 mb-1">
                                 <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px;">
                                     <i class="fas fa-clipboard-check fs-1 text-white"></i>
                                 </div>
                                 <h5 class="mt-4 mb-3 headline">GBP Profile Audit & Performance Review</h5>
     <p class="mb-0 text-start">Find out what’s working and what’s holding your Google listing back.</p>
                                 <ul class="text-start mt-3 purple-bullets">
+                                  <li>45 Strategic Audit Points & 40 Interface-Level UX Checks</li>
                                   <li >In-depth Profile Audit</li>
                                   <li>Keyword & Category Analysis</li>
                                   <li>Competitor Benchmarking</li>
                                   <li>Performance Scorecard</li>
                                 </ul>
+                                
                             </div>
                           </div>
                           
@@ -104,21 +135,20 @@
                                 <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px;">
                                     <i class="fas fa-clipboard-check fs-1 text-white"></i>
                                 </div>
-                                <h5 class="mt-4 mb-3 headline text-start">MapMyStore Touch:</h5>
-                                      <p class="mb-0 text-start">Powered by 45 strategic audit points and 40 interface-level UX checks
-designed to uncover every missed opportunity and fine-tune your profile for
-real-world visibility and trust.</p>
+                                  
                                   <h5 class="mt-4 mb-3 headline text-start">Why it matters:</h5>
-                                      <p class="mb-0 text-start">Optimization without insights is guesswork.</p>
+                                      <p class="mb-0 text-start">Optimization Without Insights is Guesswork.</p>
                                   <h5 class="mt-4 mb-3 headline text-start">How we position this:</h5>
-                                      <p class="mb-0 text-start">“We diagnose, then upgrade - no more blind spots.”</p>  
+                                      <p class="mb-0 text-start">“We Diagnose, then Upgrade. No more Blind Spots.”</p> 
+                                      <!-- <p class="mb-0 text-start">Powered by 45 Strategic Audit Points and 40 Interface-Level UX checks
+designed to uncover every missed opportunity and fine-tune your profile for
+real-world visibility and trust.</p>  -->
                                 </div>  
                             </div>
                       </div>
                     </div>
-                    
 
-                    <div class="col-lg-4 col-sm-6 text-center  pt-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="col-lg-4 col-sm-6 text-center mb-5  pt-4 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="flip-card">
                         <div class="flip-card-inner">
                           <div class="flip-card-front">
@@ -144,16 +174,17 @@ real-world visibility and trust.</p>
                                     <i class="fas fa-marker fs-1 text-white"></i>
                                 </div>
                                   <h5 class="mt-4 mb-3 headline text-start">Why it matters:</h5>
-                                      <p class="mb-0 text-start"> 90% of customers read reviews before choosing - make
-yours count.</p>
+                                      <p class="mb-0 text-start"> 90% of Customers Read Reviews before Choosing - Make
+yours Count.</p>
                                   <h5 class="mt-4 mb-3 headline text-start">How we position this:</h5>
-                                      <p class="mb-0 text-start">“Build trust. Respond smart. Stand out.”</p>  
+                                      <p class="mb-0 text-start">“Build trust. Respond Smart. Stand Out.”</p>  
                                 </div>  
                             </div>
                       </div>
-                    
                     </div>
-                    <div class="col-lg-4 col-sm-6 text-center mb-5  pt-4 wow fadeInUp" data-wow-delay="0.1s">
+
+                    
+                    <div class="col-lg-4 col-sm-6 text-center   pt-4 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="flip-card">
                         <div class="flip-card-inner">
                           <div class="flip-card-front">
@@ -177,14 +208,14 @@ yours count.</p>
                                     <i class="bi bi-image fs-1 text-white"></i>
                                 </div>
                                   <h5 class="mt-4 mb-3 headline text-start">Why it matters:</h5>
-                                      <p class="mb-0 text-start">Listings with strong visuals get more views and actions.</p>
+                                      <p class="mb-0 text-start">Listings with Strong Visuals get more Views and Actions.</p>
                                   <h5 class="mt-4 mb-3 headline text-start">How we position this:</h5>
-                                      <p class="mb-0 text-start">“Look good where it matters most — on the map.”</p>  
+                                      <p class="mb-0 text-start">“Look Good Where it Matters Most — On the Map.”</p>  
                                 </div>  
                             </div>
                       </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6 text-center mb-5 pt-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="col-lg-4 col-sm-6 text-center  pt-4 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="flip-card">
                         <div class="flip-card-inner">
                           <div class="flip-card-front">
@@ -193,7 +224,7 @@ yours count.</p>
                                     <i class="fas fa-file-image fs-1 text-white"></i>
                                 </div>
                                 <h5 class="mt-4 mb-3 headline">Google Posts & Campaign Management</h5>
-    <p class="mb-0 text-start">Keep your profile active with engaging updates and seasonal oﬀers.</p>
+    <p class="mb-0 text-start">Keep your Profile Active with Engaging Updates and Seasonal Oﬀers.</p>
                                 <ul class="text-start mt-3 purple-bullets">
                                   <li >Weekly Google Posts</li>
                                   <li>Event & Promotion Campaigns</li>
@@ -208,14 +239,14 @@ yours count.</p>
                                     <i class="fas fa-file-image fs-1 text-white"></i>
                                 </div>
                                   <h5 class="mt-4 mb-3 headline text-start">Why it matters:</h5>
-                                      <p class="mb-0 text-start">Active profiles perform better and earn more clicks.</p>
+                                      <p class="mb-0 text-start">Active Profiles Perform Better and Earn more Clicks.</p>
                                   <h5 class="mt-4 mb-3 headline text-start">How we position this:</h5>
-                                      <p class="mb-0 text-start">“Turn your profile into a dynamic sales assistant.”</p>  
+                                      <p class="mb-0 text-start">“Turn your Profile into a Dynamic Sales Assistant.”</p>  
                                 </div>  
                             </div>
                       </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6 text-center mb-5 pt-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="col-lg-4 col-sm-6 text-center  pt-4 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="flip-card">
                         <div class="flip-card-inner">
                           <div class="flip-card-front">
@@ -223,8 +254,8 @@ yours count.</p>
                                 <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px;">
                                     <i class="fas fa-laptop-code fs-1 text-white"></i>
                                 </div>
-                                <h5 class="mt-4 mb-3 headline">Local SEO & Citation Building</h5>
-    <p class="mb-0 text-start">Strengthen your local presence beyond Google Maps.</p>
+                                <h5 class="mt-4 mb-3 headline">Local SEO and Citation Building</h5>
+    <p class="mb-0 text-start">Strengthen your Local Presence Beyond Google Maps.</p>
                                 <ul class="text-start mt-3 purple-bullets">
                                   <li >Citation Submissions (Bing, JustDial, Yelp, etc.)</li>
                                   <li>NAP Consistency Checks</li>
@@ -238,9 +269,9 @@ yours count.</p>
                                     <i class="fas fa-laptop-code fs-1 text-white"></i>
                                 </div>
                                   <h5 class="mt-4 mb-3 headline text-start">Why it matters:</h5>
-                                      <p class="mb-0 text-start">The more consistent you are online, the more visible you become</p>
+                                      <p class="mb-0 text-start">The More Consistent you are Online, The more Visible you Become</p>
                                   <h5 class="mt-4 mb-3 headline text-start">How we position this:</h5>
-                                      <p class="mb-0 text-start">“Be everywhere your customers are searching.”</p>  
+                                      <p class="mb-0 text-start">“Be Everywhere your Customers are Searching.”</p>  
                                 </div>  
                             </div>
                       </div>
@@ -254,7 +285,7 @@ yours count.</p>
                                     <i class="fas fa-map fs-1 text-white"></i>
                                 </div>
                                 <h5 class="mt-4 mb-3 headline">Multi-Location Management</h5>
-    <p class="mb-0 text-start">Manage multiple business branches with ease and consistency.</p>
+    <p class="mb-0 text-start">Manage Multiple Business Branches with Ease and Consistency.</p>
                                 <ul class="text-start mt-3 purple-bullets">
                                   <li >Centralized Profile Oversight</li>
                                   <li>Location-Specific Optimization</li>
@@ -268,9 +299,9 @@ yours count.</p>
                                     <i class="fas fa-map fs-1 text-white"></i>
                                 </div>
                                   <h5 class="mt-4 mb-3 headline text-start">Why it matters:</h5>
-                                      <p class="mb-0 text-start">Consistency across locations builds credibility and boosts rankings</p>
+                                      <p class="mb-0 text-start">Consistency Across Locations Builds Credibility and Boosts Rankings</p>
                                   <h5 class="mt-4 mb-3 headline text-start">How we position this:</h5>
-                                      <p class="mb-0 text-start">“Big or small, every branch gets attention.”</p>  
+                                      <p class="mb-0 text-start">“Big or Small, Every Branch gets Attention.”</p>  
                                 </div>  
                             </div>
                       </div>
@@ -300,9 +331,9 @@ yours count.</p>
                                     <i class="fab fa-facebook-messenger fs-1 text-white"></i>
                                 </div>
                                   <h5 class="mt-4 mb-3 headline text-start">Why it matters:</h5>
-                                      <p class="mb-0 text-start">Visibility is step one. Conversions are step two.</p>
+                                      <p class="mb-0 text-start">Visibility is Step One. Conversions are Step Two.</p>
                                   <h5 class="mt-4 mb-3 headline text-start">How we position this:</h5>
-                                      <p class="mb-0 text-start">“Make it easy for customers to choose you.”</p>  
+                                      <p class="mb-0 text-start">“Make it Easy for Customers to Choose you.”</p>  
                                 </div>  
                             </div>
                       </div>
@@ -331,9 +362,9 @@ yours count.</p>
                                     <i class="fas fa-chart-line fs-1 text-white"></i>
                                 </div>
                                   <h5 class="mt-4 mb-3 headline text-start">Why it matters:</h5>
-                                      <p class="mb-0 text-start">Data-backed decisions help you grow faster.</p>
+                                      <p class="mb-0 text-start">Data-Backed Decisions Help you Grow Faster.</p>
                                   <h5 class="mt-4 mb-3 headline text-start">How we position this:</h5>
-                                      <p class="mb-0 text-start">“Let the numbers guide your next move.”</p>  
+                                      <p class="mb-0 text-start">“Let the Numbers Guide your Next Move.”</p>  
                                 </div>  
                             </div>
                       </div>
@@ -347,7 +378,7 @@ yours count.</p>
                                     <i class="fas fa-headset fs-1 text-white"></i>
                                 </div>
                                 <h5 class="mt-4 mb-3 headline">Support & Profile Maintenance</h5>
-    <p class="mb-0 text-start">Always-on support to keep your Google profile fresh and functional.</p>
+    <p class="mb-0 text-start">Always on support to keep your Google profile fresh and functional.</p>
                                 <ul class="text-start mt-3 purple-bullets">
                                   <li >24/7 Chat & Email Support</li>
                                   <li>Ongoing Profile Updates</li>
@@ -361,10 +392,10 @@ yours count.</p>
                                     <i class="fas fa-headset fs-1 text-white"></i>
                                 </div>
                                   <h5 class="mt-4 mb-3 headline text-start">Why it matters:</h5>
-                                      <p class="mb-0 text-start">Regular maintenance avoids drop-oﬀs in visibility.</p>
+                                      <p class="mb-0 text-start">Regular Maintenance Avoids Drop Oﬀs in Visibility.</p>
                                   <h5 class="mt-4 mb-3 headline text-start">How we position this:</h5>
-                                      <p class="mb-0 text-start">“We’re your digital partner - always a message
-away.”</p>  
+                                      <p class="mb-0 text-start">“We’re your Digital Partner - Always a Message
+Away.”</p>  
                                 </div>  
                             </div>
                       </div>
