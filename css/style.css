@@ -66,6 +66,7 @@ h6,
 }
 
 
+
 /*** Button ***/
 .btn {
     transition: .5s;
@@ -790,10 +791,30 @@ background-position: center;
   justify-content: space-between;
 }
 
-  .choosesection{
-    /* background: linear-gradient(135deg, #5D67EC, #7934F4); */
+  .choosesection {
+    position: relative;
+    background: linear-gradient(to bottom right, 
+                rgba(167, 92, 228, 0.8),var(--primary));
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 12px 12px 5px rgba(0, 0, 0, 0.15);
     min-height: auto;
     padding: 3rem 0;
+    overflow: hidden;
+  }
+
+  .choosesection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg,
+                rgba(255, 255, 255, 0.1),
+                rgba(255, 255, 255, 0.05));
+    pointer-events: none;
   }
 
   .popup {
@@ -926,7 +947,7 @@ background-position: center;
       padding: 2rem;
       border-radius: 1rem;
       text-align: center;
-      max-width: 1130px;
+      max-width: 950px;
       margin: 0 auto;
     }
     .cta strong {
@@ -965,22 +986,6 @@ background-position: center;
   animation: slideUpFadeIn 0.8s cubic-bezier(.34,1.56,.64,1) forwards;
 }
 
-/* Custom carousel responsive styles */
-@media (max-width: 767.98px) {
-  #services .carousel-item .row {
-    flex-direction: column;
-  }
-  #services .carousel-item .col-lg-4:not(:first-child) {
-    display: none;
-  }
-  #services .carousel-item .col-lg-4 {
-    width: 100%;
-    padding: 0 1rem;
-  }
-  #services .service-card {
-    margin-bottom: 0;
-  }
-}
 
 @keyframes slideUpFadeIn {
   to {
@@ -1247,9 +1252,46 @@ background-position: center;
   }
 }
 
+/* Custom carousel responsive styles */
+@media (min-width: 577px) and (max-width: 768px) {
+  #services .carousel-item .row {
+    flex-direction: row;
+  }
+  #services .carousel-item .col-lg-4 {
+    width: 100%;
+    padding: 0 1rem;
+    display: none;
+  }
+  #services .carousel-item .col-lg-4:first-child {
+    display: block;
+  }
+  #services .service-card {
+    margin-bottom: 0;
+  }
+  /* Make each card a separate slide on mobile */
+  #services .carousel-item-next,
+  #services .carousel-item-prev,
+  #services .carousel-item.active {
+    display: flex;
+  }
+  #services .carousel-inner .carousel-item-end.active,
+  #services .carousel-inner .carousel-item-next {
+    transform: translateX(100%);
+  }
+  #services .carousel-inner .carousel-item-start.active, 
+  #services .carousel-inner .carousel-item-prev {
+    transform: translateX(-100%);
+  }
+  #services .carousel-inner .carousel-item-end,
+  #services .carousel-inner .carousel-item-start { 
+    transform: translateX(0);
+  }
+}
+
+
 .carousel-nav-icon {
-   height: 48px;
-   width: 48px;
+   height: 32px;
+   width: 32px;
 }
 .carousel-item {
    .col, .col-sm, .col-md {
@@ -1258,4 +1300,157 @@ background-position: center;
       background-size: cover;
       background-position: center center;
    }
+}
+
+/* Client base card styles */
+.client-base{
+  background: linear-gradient(135deg, rgb(250, 247, 251), rgba(233, 213, 255, 0.9));
+  /* background-color: var(--primary); */
+  backdrop-filter: blur(10px);
+    box-shadow: 12px 12px 5px rgba(139, 139, 139, 0.15);
+    padding: 3rem;
+    margin-bottom: 4rem;
+}
+.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    
+}
+
+.client-card {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    padding: 25px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 100%;
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.client-card i {
+    font-size: 28px;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.client-card h5 {
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.client-card p {
+    font-size: 0.95rem;
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Healthcare & Wellness */
+.col-md-4:nth-child(1) .client-card i { color: #ff8a8a; }
+.col-md-4:nth-child(1) .client-card:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(135deg, #fff1f1 0%, #ffe4e4 100%);
+    border-color: rgba(255, 138, 138, 0.3);
+    box-shadow: 0 10px 30px rgba(255, 138, 138, 0.15);
+}
+
+/* Food & Hospitality */
+.col-md-4:nth-child(2) .client-card i { color: #5b9dff; }
+.col-md-4:nth-child(2) .client-card:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(135deg, #f0f8ff 0%, #e6f0ff 100%);
+    border-color: rgba(91, 157, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(91, 157, 255, 0.15);
+}
+
+/* Retail & Services */
+.col-md-4:nth-child(3) .client-card i { color: #a875ff; }
+.col-md-4:nth-child(3) .client-card:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(135deg, #f7f1ff 0%, #f1e4ff 100%);
+    border-color: rgba(168, 117, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(168, 117, 255, 0.15);
+}
+
+/* Education */
+.col-md-4:nth-child(4) .client-card i { color: #63d897; }
+.col-md-4:nth-child(4) .client-card:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(135deg, #f0fff7 0%, #e4fff0 100%);
+    border-color: rgba(99, 216, 151, 0.3);
+    box-shadow: 0 10px 30px rgba(99, 216, 151, 0.15);
+}
+
+/* Real Estate */
+.col-md-4:nth-child(5) .client-card i { color: #ffa755; }
+.col-md-4:nth-child(5) .client-card:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(135deg, #fff5f0 0%, #ffe9e4 100%);
+    border-color: rgba(255, 167, 85, 0.3);
+    box-shadow: 0 10px 30px rgba(255, 167, 85, 0.15);
+}
+
+/* Legal & Financial */
+.col-md-4:nth-child(6) .client-card i { color: #5c6bc0; }
+.col-md-4:nth-child(6) .client-card:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(135deg, #f0f1ff 0%, #e4e6ff 100%);
+    border-color: rgba(92, 107, 192, 0.3);
+    box-shadow: 0 10px 30px rgba(92, 107, 192, 0.15);
+}
+
+/* Automotive */
+.col-md-4:nth-child(7) .client-card i { color: #ff6b6b; }
+.col-md-4:nth-child(7) .client-card:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(135deg, #fff0f0 0%, #ffe0e0 100%);
+    border-color: rgba(255, 107, 107, 0.3);
+    box-shadow: 0 10px 30px rgba(255, 107, 107, 0.15);
+}
+
+/* Community & Nonprofits */
+.col-md-4:nth-child(8) .client-card i { color: #4fd1c5; }
+.col-md-4:nth-child(8) .client-card:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(135deg, #f0fffd 0%, #e0fff9 100%);
+    border-color: rgba(79, 209, 197, 0.3);
+    box-shadow: 0 10px 30px rgba(79, 209, 197, 0.15);
+}
+
+/* Startups */
+.col-md-4:nth-child(9) .client-card i { color: #6bc6ff; }
+.col-md-4:nth-child(9) .client-card:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f4ff 100%);
+    border-color: rgba(107, 198, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(107, 198, 255, 0.15);
+}
+
+/* Large Enterprises */
+.col-md-4:nth-child(10) .client-card i { color: #845ef7; }
+.col-md-4:nth-child(10) .client-card:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(135deg, #f3f0ff 0%, #eee0ff 100%);
+    border-color: rgba(132, 94, 247, 0.3);
+    box-shadow: 0 10px 30px rgba(132, 94, 247, 0.15);
+}
+
+/* Global Companies */
+.col-md-4:nth-child(11) .client-card i { color: #20c997; }
+.col-md-4:nth-child(11) .client-card:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(135deg, #f0fff7 0%, #e0fff0 100%);
+    border-color: rgba(32, 201, 151, 0.3);
+    box-shadow: 0 10px 30px rgba(32, 201, 151, 0.15);
+}
+
+/* Business Without Digital Team */
+.col-md-4:nth-child(12) .client-card i { color: #f783ac; }
+.col-md-4:nth-child(12) .client-card:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(135deg, #fff0f6 0%, #ffe0ed 100%);
+    border-color: rgba(247, 131, 172, 0.3);
+    box-shadow: 0 10px 30px rgba(247, 131, 172, 0.15);
 }
