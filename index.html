@@ -11,6 +11,9 @@
     <!-- Favicon -->
     <link href="img/mms_logo.png" rel="icon">
 
+    <!--Canonical URL-->
+    <link rel="canonical" href="https://www.mapmystore.com/" />
+
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -60,7 +63,7 @@
                 <a href="#" class="navbar-brand d-flex align-items-center gap-2 p-0">
 <img src="img/main_logo.webp" alt="Logo" style="height: 90px !important; width: auto;">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-describedby="Toggle navigation">
                     <span class="fa fa-bars"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -72,7 +75,7 @@
                         <!-- <a href="#pricing" class="nav-item nav-link" onclick="document.querySelector('#pricing').scrollIntoView({behavior: 'smooth'})">Pricing</a> -->
                         <a href="#contact" class="nav-item nav-link" onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})">Contact</a>
                     </div>
-                    <a href="#contact" class="btn btn-primary-gradient btn-glow py-2 px-4 ms-3 d-none d-lg-block" style="font-family: 'Merriweather'; border-radius: 13px !important;">Contact Us!</a>
+                    <a href="#contact" class="btn btn-primary-gradient btn-glow py-2 px-4 ms-3 d-none d-lg-block" style="font-family: 'Merriweather'; border-radius: 13px !important;">Contact Us</a>
                 </div>
             </nav>
 
@@ -155,7 +158,7 @@ Whether you're a small shop or a multi-location brand, we make sure your busines
                         </div>
                     </div>
                     <div class="col-lg-5">
-                        <img class="img-fluid wow fadeInUp img-glow" data-wow-delay="0.5s" width="450" src="./img/logo2 (1).png">
+                        <img class="img-fluid wow fadeInUp img-glow" data-wow-delay="0.5s" width="450" src="./img/logo2 (1).png" alt="MapMyStore-Logo">
                     </div>
                 </div>
             </div>
@@ -169,7 +172,7 @@ Whether you're a small shop or a multi-location brand, we make sure your busines
             <div class="container py-5 px-lg-5">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-6">
-                        <img class="img-fluid wow fadeInUp img-glow" data-wow-delay="0.1s"  width="520"  src="img/Website Page 3 image.png">
+                        <img class="img-fluid wow fadeInUp img-glow" data-wow-delay="0.1s"  width="520"  src="img/Website Page 3 image.png" alt="End-to-End Services To Help Your Business Shine Online">
                     </div>
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                         <h5 class="text-primary-gradient fw-medium">What we do</h5>
@@ -209,7 +212,7 @@ Whether you're a small shop or a multi-location brand, we make sure your busines
 
         <!--Why choose us Section start-->
         
-        <div class="container my-5 px-4 choosesection bg-primary-gradient" id = "speciality">
+        <div class="container my-5 px-4 choosesection" id = "speciality">
             
             <div class="text-center mb-5">
                <h5 class=" fw-medium " id = "speciality-header">Why Choose Us</h5> 
@@ -520,9 +523,9 @@ Our in-depth understanding of GBP best practices ensures your profile is not jus
       </div>
       <div class="col-10">
          <!--Start carousel-->
-         <div id="carouselExampleIndicators" class="carousel slide" style="position: relative;">
+         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false" style="position: relative;">
             <div class="carousel-inner wow fadeInUp" data-wow-delay="0.1s">
-              <!-- Slide 1: Card 1, 2, 3 -->
+              <!-- Cards will show as individual slides on mobile -->
               <div class="carousel-item active " >
                 <div class="row justify-content-center" style = "padding: 1rem;">
                   <div class="col-12 col-lg-4 d-flex align-items-stretch mb-4 mb-lg-0 " >
@@ -746,9 +749,9 @@ and aesthetically pleasing.</p>
             
             <!-- Carousel indicators (dots) -->
             <div class="carousel-indicators" style="position: absolute; bottom: -30px; left: 0; right: 0; margin: auto;">
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" data-bs-toggle="tooltip" title="Google Business Profile Services"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" data-bs-toggle="tooltip" title="MapMyStore Services Navigation"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" data-bs-toggle="tooltip" title="MapMyStore Services Navigation"></button>
             </div>
          </div>
          <!--End carousel-->
@@ -916,6 +919,128 @@ and aesthetically pleasing.</p>
         </div> -->
         <!-- Pricing End -->
 </div>
+
+<!--client Base Section-->
+<div >
+<section class="container py-5 client-base">
+  <div class="section-title">
+    <h2 class="fw-bold ">Who We Serve</h2>
+    <p class="text-muted">From local startups to global enterprises, we help businesses across every industry establish and optimize their digital presence with Google Business Profile and local SEO.</p>
+  </div>
+
+  <div class="row g-4">
+    <!-- Healthcare -->
+    <div class="col-md-4 col-sm-6">
+      <div class="client-card h-100">
+        
+        <h5> <i class="bi bi-heart"></i> Healthcare & Wellness</h5>
+        <p>Local clinics, hospitals, salons, gyms, spas, yoga studios, nutritionists, physiotherapists</p>
+      </div>
+    </div>
+
+    <!-- Food & Hospitality -->
+    <div class="col-md-4 col-sm-6">
+      <div class="client-card h-100">
+        <i class="bi bi-cup-hot"></i>
+        <h5>Food & Hospitality</h5>
+        <p>Restaurants, cafes, cloud kitchens, bakeries, hotels, resorts, travel agencies, tour operators</p>
+      </div>
+    </div>
+
+    <!-- Retail -->
+    <div class="col-md-4 col-sm-6">
+      <div class="client-card h-100">
+        <i class="bi bi-bag"></i>
+        <h5>Retail & Services</h5>
+        <p>Boutiques, grocery stores, repair shops, event planners, franchise chains</p>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="col-md-4 col-sm-6">
+      <div class="client-card h-100">
+        <i class="bi bi-mortarboard"></i>
+        <h5>Education</h5>
+        <p>Schools, colleges, coaching centers, training academies</p>
+      </div>
+    </div>
+
+    <!-- Real Estate -->
+    <div class="col-md-4 col-sm-6">
+      <div class="client-card h-100">
+        <i class="bi bi-house"></i>
+        <h5>Real Estate & Property</h5>
+        <p>Agents, builders, and rental services</p>
+      </div>
+    </div>
+
+    <!-- Legal -->
+    <div class="col-md-4 col-sm-6">
+      <div class="client-card h-100">
+        <i class="bi bi-bank"></i>
+        <h5>Legal & Financial Services</h5>
+        <p>Law firms, accountants, tax consultants, financial advisors</p>
+      </div>
+    </div>
+
+    <!-- Automotive -->
+    <div class="col-md-4 col-sm-6">
+      <div class="client-card h-100">
+        <i class="bi bi-car-front"></i>
+        <h5>Automotive</h5>
+        <p>Car dealers, bike showrooms, and service centers</p>
+      </div>
+    </div>
+
+    <!-- Nonprofits -->
+    <div class="col-md-4 col-sm-6">
+      <div class="client-card h-100">
+        <i class="bi bi-people"></i>
+        <h5>Community & Nonprofits</h5>
+        <p>NGOs, churches, and social initiatives seeking visibility</p>
+      </div>
+    </div>
+
+    <!-- Startups -->
+    <div class="col-md-4 col-sm-6">
+      <div class="client-card h-100">
+        <i class="bi bi-graph-up-arrow"></i>
+        <h5>Startups & Growing Businesses</h5>
+        <p>Those ready to take their online presence to the next level</p>
+      </div>
+    </div>
+
+    <!-- Large Enterprises -->
+    <div class="col-md-4 col-sm-6">
+      <div class="client-card h-100">
+        <i class="bi bi-building"></i>
+        <h5>Large Enterprises</h5>
+        <p>Companies with hundreds or thousands of employees wanting consistent digital presence</p>
+      </div>
+    </div>
+
+    <!-- Global Companies -->
+    <div class="col-md-4 col-sm-6">
+      <div class="client-card h-100">
+        <i class="bi bi-globe2"></i>
+        <h5>Global Companies</h5>
+        <p>Organizations aiming to build credibility and professional brand image worldwide</p>
+      </div>
+    </div>
+
+    <!-- No Digital Team -->
+    <div class="col-md-4 col-sm-6">
+      <div class="client-card h-100">
+        <i class="bi bi-headset"></i>
+        <h5>Business Owners Without Digital Team</h5>
+        <p>Who want MapMyStore to act as their extended team, handling everything from setup to management</p>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!--client base section end-->
         
          <div class="new-section">
         <section class="section" id="business-critical-info">
@@ -923,39 +1048,35 @@ and aesthetically pleasing.</p>
       <h1>Things Every Business Owner <span>MUST Know</span></h1>
       <p class="description">Master these insights to grow with confidence, or risk being left behind while competitors win your customers!!!</p>
       <div class="cards">
-        <div class="card " onclick="window.location.href='blog/blog1.html'" style="cursor: pointer;">
+        <div class="card " onclick="window.location.href='blog/no-gbp-impact-on-businesses/index.html'" style="cursor: pointer;">
           <div class="badge urgent">URGENT</div>
           <div class="card-icon bg-danger"><i class="fa fa-arrow-trend-down"></i></div>
           <h3>The REAL Cost of Not Being Listed on Google</h3>
           <p>Discover the shocking amount of money your business loses every single day by not ranking on the first page</p>
           <p class="highlight">Every day you’re not ranking on Google, you’re losing customers to competitors.</p>
-          <a href="blog/blog1.html">Learn More →</a>
+          <a href="blog/no-gbp-impact-on-businesses/index.html">Learn More →</a>
         </div>
-        <div class="card critical" onclick="window.location.href='blog/blog2.html'" style="cursor: pointer;">
+        <div class="card critical" onclick="window.location.href='blog/google-business-visibility-mistakes/index.html'" style="cursor: pointer;">
           <div class="badge critical-badge">CRITICAL</div>
           <div class="card-icon bg-warning"><i class="fa fa-exclamation-triangle"></i></div>
           <h3>7 Mistakes Keeping Your Business Invisible on Google</h3>
           <p>Learn about these rank killers that silently push you off Google and cost you customers every single day</p>
           <p class="highlight">Most of the local businesses make these mistakes</p>
-          <a href="blog/blog2.html">Learn More →</a>
+          <a href="blog/google-business-visibility-mistakes/index.html">Learn More →</a>
         </div>
-        <div class="card solution" onclick="window.location.href='blog/blog3.html'" style="cursor: pointer;">
+        <div class="card solution" onclick="window.location.href='blog/google-business-profile-optimization-strategies/index.html'" style="cursor: pointer;">
           <div class="badge solution-badge">SOLUTION</div>
           <div class="card-icon bg-success"><i class="fa fa-bolt"></i></div>
           <h3>Google Business Profile Optimization</h3>
           <p>The game-changing strategy that puts you ahead of competitors and captures local customers</p>
           <p class="highlight">95% Improved Results</p>
-          <a href="blog/blog3.html">Learn More →</a>
+          <a href="blog/google-business-profile-optimization-strategies/index.html">Learn More →</a>
         </div>
       </div>
       <div class="cta">
         <strong>Is MapMyStore Right for You?</strong> 
         <p>If you serve local customers, want more visibility on Google, and need a better online-first impression, then YES.</p>
-        <p>Local clinics, hospitals, salons, gyms, repair shops, boutiques, grocery stores, restaurants, cafes, cloud kitchens, bakeries, event planners, franchise chains, growing startups and all the businesses that want to take their online presence to the next level.</p>
-        <p>Large enterprises with hundreds or thousands of employees looking for a consistent and professional digital presence across locations.</p>
-        <p>Global companies that want to enhance their credibility and brand image worldwide.</p>
-        <p>Business owners who don’t have an in-house digital team and want MapMyStore to act as their extended team, handling everything from setup to ongoing management.</p>
-      </div>
+        </div>
     </section>
     </div>
 
@@ -1412,7 +1533,8 @@ Managing it is like keeping the shop clean, welcoming, and stocked, so customers
                             <a class="btn btn-outline-light btn-social me-2" href="mailto:connect@mapmystore.com"><i class="fa fa-envelope"></i></a>
                             <a class="btn btn-outline-light btn-social me-2" href="tel:+917358588788"><i class="fa fa-phone"></i></a>
                             <a class="btn btn-outline-light btn-social me-2" href="https://www.linkedin.com/company/mapmystore/"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="https://www.mapmystore.com/"><i class="fas fa-globe"></i></a>
+                            <a class="btn btn-outline-light btn-social me-2" href="https://wa.me/917358588788"><i class="fab fa-whatsapp"></i></a>
+                            
                         </div>
                     </div>
                     <div class="col-md-5 col-lg-2">
@@ -1433,9 +1555,9 @@ Managing it is like keeping the shop clean, welcoming, and stocked, so customers
                     </div>
                     <div class="col-md-6 col-lg-3">
                         <h4 class="text-white mb-4">Contact Info</h4>
-                        <p><i class="fa fa-envelope me-3"></i>connect@mapmystore.com</p>
-                        <p><i class="fa fa-phone me-3"></i>+91 7358588788</p>
-                        <p><i class="fa fa-map-marker-alt me-3"></i>Chennai, India</p>
+                        <a class="text-light"  href="mailto:connect@mapmystore.com"><i class="fa fa-envelope me-3 mb-3"></i>connect@mapmystore.com</a></br>
+                        <a class="text-light mb-5 mt-5" href="tel:+917358588788"><i class="fa fa-phone me-3 mb-3"></i>+91 7358588788</a></br>
+                        <a><i class="fa fa-map-marker-alt me-3"></i>Chennai, India</a>
                         
                     </div>
                     <!-- <div class="col-md-6 col-lg-3">
