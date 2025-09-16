@@ -269,7 +269,7 @@ h6,
     margin-bottom: 0rem;
     padding: 13rem 0 10rem 0;
     background:
-    url('../img/HomeNew.png');
+    url('../img/Home_BackGround.svg');
 background-size: cover;
 background-position: center;
     background-position:
@@ -436,7 +436,7 @@ background-position: center;
 .footer {
   margin-top: 6rem;
   padding-top: 9rem;
-  background: url('../img/FooterBg.png') no-repeat center center;
+  background: url('../img/Home_Footer.svg') no-repeat center center;
   background-size: cover;
 }
 
