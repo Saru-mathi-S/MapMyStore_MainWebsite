@@ -1589,9 +1589,10 @@ background-position: center;
 }
 
 .success-section .success-box .success-label {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #2B2B2B;
     line-height: 1.4;
+    font-family: "Jost", sans-serif;
     margin-bottom: 0.75rem;
     font-weight: 500;
 }
