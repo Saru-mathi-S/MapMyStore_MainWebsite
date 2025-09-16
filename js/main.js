@@ -58,9 +58,66 @@
 
 
     // Facts counter
-    $('[data-toggle="counter-up"]').counterUp({
-        delay: 10,
-        time: 2000
+    function initCounter() {
+        var counted = false;
+        $(window).scroll(function() {
+            var oTop = $('.success-section').offset().top - window.innerHeight;
+            if (!counted && $(window).scrollTop() > oTop) {
+                $('.success-value').each(function() {
+                    var $this = $(this);
+                    var text = $this.text();
+                    if (text.indexOf('+') > -1) {
+                        var countTo = parseInt(text);
+                        $({countNum: 0}).animate({
+                            countNum: countTo
+                        }, {
+                            duration: 2000,
+                            easing: 'swing',
+                            step: function() {
+                                $this.text(Math.floor(this.countNum) + '+');
+                            },
+                            complete: function() {
+                                $this.text(this.countNum + '+');
+                            }
+                        });
+                    } else if (text.indexOf('%') > -1) {
+                        var countTo = parseInt(text);
+                        $({countNum: 0}).animate({
+                            countNum: countTo
+                        }, {
+                            duration: 2000,
+                            easing: 'swing',
+                            step: function() {
+                                $this.text(Math.floor(this.countNum) + '%');
+                            },
+                            complete: function() {
+                                $this.text(this.countNum + '%');
+                            }
+                        });
+                    } else if (text !== '24/7') {
+                        var countTo = parseInt(text);
+                        $({countNum: 0}).animate({
+                            countNum: countTo
+                        }, {
+                            duration: 2000,
+                            easing: 'swing',
+                            step: function() {
+                                $this.text(Math.floor(this.countNum));
+                            },
+                            complete: function() {
+                                $this.text(this.countNum);
+                            }
+                        });
+                    }
+                });
+                counted = true;
+            }
+        });
+    }
+    
+    // Initialize counter when document is ready
+    $(document).ready(function() {
+        initCounter();
     });
 
     // Services Carousel Configuration
