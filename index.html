@@ -36,6 +36,51 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
+    <style>
+        .learn-more-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .card.urgent .learn-more-btn {
+            background: linear-gradient(45deg, #dc3545, #ff6b6b);
+        }
+        .card.critical .learn-more-btn {
+            background: linear-gradient(45deg, #ffc107, #ffad33);
+        }
+        .card.solution .learn-more-btn {
+            background: linear-gradient(45deg, #28a745, #34ce57);
+        }
+        .learn-more-btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            color: white;
+            text-decoration: none;
+        }
+        .learn-more-btn i {
+            margin-right: 5px;
+            transition: transform 0.3s ease;
+        }
+        .learn-more-btn:hover i {
+            transform: translateX(3px);
+        }
+        .card.urgent .learn-more-btn:hover {
+            box-shadow: 0 6px 20px rgba(220, 53, 69, 0.3);
+        }
+        .card.critical .learn-more-btn:hover {
+            box-shadow: 0 6px 20px rgba(255, 193, 7, 0.3);
+        }
+        .card.solution .learn-more-btn:hover {
+            box-shadow: 0 6px 20px rgba(40, 167, 69, 0.3);
+        }
+    </style>
+
     <!-- Google Analytics (GA4) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5145ZV756C"></script>
     <script>
@@ -1109,7 +1154,7 @@ and aesthetically pleasing.</p>
           <h3>The REAL Cost of Not Being Listed on Google</h3>
           <p>Discover the shocking amount of money your business loses every single day by not ranking on the first page</p>
           <p class="highlight">Every day you’re not ranking on Google, you’re losing customers to competitors.</p>
-          <a href="blog/no-gbp-impact-on-businesses/index.html">Learn More →</a>
+          <a href="blog/no-gbp-impact-on-businesses/index.html" class="learn-more-btn" ><i class="fa fa-arrow-right"></i> Learn More</a>
         </div>
         <div class="card critical" onclick="window.location.href='blog/google-business-visibility-mistakes/index.html'" style="cursor: pointer;">
           <div class="badge critical-badge">CRITICAL</div>
@@ -1117,7 +1162,7 @@ and aesthetically pleasing.</p>
           <h3>7 Mistakes Keeping Your Business Invisible on Google</h3>
           <p>Learn about these rank killers that silently push you off Google and cost you customers every single day</p>
           <p class="highlight">Most of the local businesses make these mistakes</p>
-          <a href="blog/google-business-visibility-mistakes/index.html">Learn More →</a>
+          <a href="blog/google-business-visibility-mistakes/index.html" class="learn-more-btn" ><i class="fa fa-arrow-right"></i> Learn More </a>
         </div>
         <div class="card solution" onclick="window.location.href='blog/google-business-profile-optimization-strategies/index.html'" style="cursor: pointer;">
           <div class="badge solution-badge">SOLUTION</div>
@@ -1125,7 +1170,7 @@ and aesthetically pleasing.</p>
           <h3>Google Business Profile Optimization</h3>
           <p>The game-changing strategy that puts you ahead of competitors and captures local customers</p>
           <p class="highlight">95% Improved Results</p>
-          <a href="blog/google-business-profile-optimization-strategies/index.html">Learn More →</a>
+          <a href="blog/google-business-profile-optimization-strategies/index.html" class="learn-more-btn" style = "background: linear-gradient(45deg, #6531cd, #774ac6);"><i class="fa fa-arrow-right"></i> Learn More</a>
         </div>
       </div>
       <div class="cta">
