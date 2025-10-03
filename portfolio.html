@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Local Café - Case Study</title>
+  <!-- Favicon -->
+    <link href="img/mms_logo.png" rel="icon">
+
+   <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&family=DynaPuff:wght@400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Ephesis&family=Luckiest+Guy&family=Matemasie&family=Protest+Revolution&family=Rubik+Moonrocks&family=Ribeye&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+   
+
+    <!-- Icon Font Stylesheet -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet"> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Libraries Stylesheet -->
+    <link href="./lib/animate/animate.min.css" rel="stylesheet">
+    <!-- <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet"> -->
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="./css/style.css" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #6948c7;
+    --secondary:#a75ce4 ;
+      --light: #F0F6FF;
+      --dark: #262B47;
+    }
+    body {
+      background-color: var(--light);
+      font-family: 'Merriweather', serif;
+    }
+    .case-study-card {
+      background-image: radial-gradient(circle, #f6ddfa, #f7dffa, #f7e0f9, #f8e2f9, #f8e4f9, #f5e6fb, #f1e7fd, #eee9fe, #e7ecff, #e2eefe, #dff0fb, #def1f8);
+      border-radius: 24px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+      box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .08);
+      transition: .5s;
+    }
+    .case-study-card:hover {
+      box-shadow: 0 .5rem 2rem rgba(0, 0, 0, .15);
+    }
+    .story-section h2 {
+      font-size: 32px;
+      font-weight: 700;
+      color: black;
+      margin-bottom: 16px;
+      background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.74),rgba(0, 0, 0, 0.735));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .story-section p {
+      color: var(--dark);
+      font-size: 16px;
+      line-height: 1.8;
+    }
+    .tag-before {
+      background: linear-gradient(to bottom right, var(--primary), var(--secondary));
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 4px 16px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+    .image-section {
+      background: var(--light);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, .05);
+    }
+    .image-container {
+      background: #fff;
+      border-radius: 12px;
+      height: 400px;
+      width: 100%;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    .case-study-image {
+      border-radius: 12px;
+      transition: transform 0.5s ease;
+    }
+    .case-study-image:hover {
+      transform: scale(1.02);
+    }
+    .btn-toggle {
+      padding: 10px 20px;
+      border-radius: 12px;
+      font-weight: 500;
+      font-size: 15px;
+      transition: .5s;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+    .btn-toggle.active {
+      background: linear-gradient(to bottom right, var(--primary), var(--secondary));
+      color: white;
+    }
+    .btn-toggle:not(.active) {
+      background: var(--light);
+      color: var(--dark);
+    }
+    .btn-toggle:not(.active):hover {
+      background: linear-gradient(to bottom right, var(--primary), var(--secondary));
+      color: white;
+      opacity: 0.9;
+    }
+    .carousel-controls {
+      position: absolute;
+      top: 40px;
+      right: 40px;
+      display: flex;
+      gap: 8px;
+    }
+    .carousel-controls button {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(to bottom right, var(--primary), var(--secondary));
+      color: #fff;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: .5s;
+    }
+    .carousel-controls button:hover {
+      background: linear-gradient(to bottom right, var(--secondary), var(--primary));
+      transform: translateY(-2px);
+    }
+    .location-info {
+      color: var(--dark);
+      font-size: 15px;
+      opacity: 0.8;
+    }
+    .text-primary-gradient {
+      background: linear-gradient(to bottom right, var(--primary), var(--secondary));
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .text-dark-50 {
+      color: var(--dark);
+      opacity: 0.8;
+    }
+    .display-5{
+        font-size: 3.8rem;
+    }
+
+    .portfolio-cta {
+      background-image: linear-gradient(to right top, #d7c9ff, #dcd1fc, #e1daf9, #e7e2f6, #eceaf3);;
+      padding: 2rem;
+      border-radius: 1rem;
+      text-align: center;
+      max-width: 950px;
+      margin: 0 auto;
+    }
+    .portfolio-cta strong {
+      color: var(--primary);
+    }
+    .portfolio-cta p {
+      color: #ddd;
+      margin: 1rem 0;
+    }
+    .portfolio-cta button {
+      background: #ffb400;
+      color: #000;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 2rem;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .portfolio-cta button:hover {
+      background: #ffc900;
+    }
+    .case-study-card {
+      background-image: radial-gradient(circle, #f6ddfa, #f7dffa, #f7e0f9, #f8e2f9, #f8e4f9, #f5e6fb, #f1e7fd, #eee9fe, #e7ecff, #e2eefe, #dff0fb, #def1f8);
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .story-section h5 {
+      font-weight: 700;
+    }
+    .challenge-text {
+      color: #e63946;
+      font-weight: 600;
+    }
+    .results-container {
+      margin-top: 25px;
+    }
+    .results-card {
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* padding-top: 2rem;
+      padding-left: 2rem;
+      padding-right: 2rem; */
+    }
+    .results-card:hover {
+      transform: translateY(-5px);
+    }
+    .results-card img {
+      width: 100%;
+      height: 500px;
+      object-fit: contain;
+      object-position: center;
+      display: block;
+      margin: 0 auto;
+      background-color: #f8f9fa;
+    }
+    .results-card-body {
+      padding: 15px;
+      text-align: center;
+    }
+    .results-card-body h4 {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .carousel-controls {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .container {
+        padding: 15px;
+      }
+      
+      .case-study-card {
+        padding: 25px;
+        border-radius: 20px;
+      }
+
+      .story-section h2 {
+        font-size: 24px;
+        margin-bottom: 12px;
+      }
+
+      .story-section p {
+        font-size: 15px;
+        line-height: 1.6;
+      }
+
+      .image-container {
+        height: 300px;
+      }
+
+      .btn-toggle {
+        padding: 8px 16px;
+        font-size: 14px;
+      }
+
+      .carousel-controls {
+        top: 20px;
+        right: 20px;
+      }
+
+      .carousel-controls button {
+        width: 36px;
+        height: 36px;
+      }
+
+      .results-container {
+        margin-top: 32px;
+      }
+
+      .results-container h2 {
+        font-size: 24px;
+        margin-bottom: 24px;
+      }
+
+      .results-box {
+        padding: 16px;
+      }
+
+      .results-box h3 {
+        font-size: 24px;
+      }
+
+      .results-box p {
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .case-study-card {
+        padding: 20px;
+      }
+
+      .display-5 {
+        font-size: 28px;
+      }
+
+      .fs-5 {
+        font-size: 15px !important;
+      }
+
+      .image-container {
+        height: 250px;
+      }
+
+      .d-flex.gap-3 {
+        gap: 0.5rem !important;
+      }
+
+      .btn-toggle {
+        padding: 8px 12px;
+        font-size: 13px;
+      }
+
+      .results-container .row {
+        --bs-gutter-x: 0.75rem;
+      }
+
+      .results-box {
+        padding: 12px;
+        margin-bottom: 10px;
+      }
+
+      .results-box h3 {
+        font-size: 20px;
+      }
+
+      .results-box p {
+        font-size: 12px;
+      }
+
+      .carousel-controls {
+        top: 15px;
+        right: 15px;
+      }
+
+      .carousel-controls button {
+        width: 32px;
+        height: 32px;
+      }
+
+      .carousel-controls span {
+        font-size: 14px;
+      }
+    }
+    
+    /* Add smooth scroll behavior */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Improve touch interactions on mobile */
+    @media (hover: none) {
+      .case-study-image:hover {
+        transform: none;
+      }
+
+      .btn-toggle {
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      .case-study-card:hover {
+        box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .08);
+      }
+    }
+    .results-container {
+      margin-top: 48px;
+    }
+    .results-container h2 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 32px;
+      text-align: center;
+    }
+    .results-box {
+      background: #fff;
+      border-radius: 16px;
+      padding: 24px;
+      text-align: center;
+    }
+    .results-box h3 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .results-box.profile-views h3 { color: #111827; }
+    .results-box.customer-calls h3 { color: #10B981; }
+    .results-box.rating h3 { color: #F59E0B; }
+    .results-box.ranking h3 { color: #3B82F6; }
+    .results-box p {
+      color: #6B7280;
+      font-size: 15px;
+      margin: 0;
+    }
+
+    /*** Navbar ***/
+.navbar-light .navbar-nav .nav-link {
+    position: relative;
+    margin-right: 25px;
+    padding: 40px 0;
+    font-family: "Merriweather", serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--dark) !important;
+    outline: none;
+    transition: .5s;
+}
+
+    /* Modal Styles */
+    .modal-backdrop.show {
+      opacity: 0.8;
+    }
+
+    .results-card .graph-wrapper {
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .results-card .graph-wrapper:hover {
+      transform: scale(1.05);
+    }
+
+    #imageModal .modal-content {
+      background-color: transparent;
+    }
+
+    #imageModal .btn-close-white {
+      filter: brightness(0) invert(1);
+      opacity: 0.8;
+    }
+
+    #imageModal .btn-close-white:hover {
+      opacity: 1;
+    }
+
+    .navbar-light .navbar-nav .nav-link::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 15px solid;
+    border-color: var(--primary) transparent transparent transparent;
+    transition: all .5s ease;
+}
+
+
+
+  </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51" class="bg-white">
+<!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        
+            <!-- <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-6 py-2 py-lg-0" style="color: black">
+                <a href="#" class="navbar-brand d-flex align-items-center gap-2 p-0">
+<img src="img/main_logo.webp" alt="Logo" style="height: 90px !important; width: auto;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-describedby="Toggle navigation">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto py-0">
+                        <a href="../../index.html" onclick="window.location.href='../../index.html';" class="nav-link ">Home</a>
+                    <a href="../../index.html#about" onclick="window.location.href='../../index.html#about';" class="nav-link ">About</a>
+                    <a href="#" class="nav-link active" onclick="window.location.href='';" >Portfolio</a>
+                    <a href="../../index.html#speciality" onclick="window.location.href='../../index.html#speciality';" class="nav-link">Why Us</a>
+                    <a href="../../index.html#services" onclick="window.location.href='../../index.html#services';" class="nav-link ">Services</a> 
+                    <a href="../../index.html#contact" onclick="window.location.href='../../index.html#contact';" class="nav-link">Contact</a>
+                </div>
+                <a href="../../index.html#contact" class="btn btn-primary-gradient rounded-pill px-4 py-2">Contact US!</a>
+            </div>
+                    
+            </nav> -->
+            <!-- Navbar Start -->
+    ~
+    <!-- Navbar End -->
+
+            
+<div class="container my-5">
+  <!-- Success Stories Header -->
+   <a href="index.html" class="d-inline-flex align-items-center text-decoration-none mb-4" style="color: #7c3aed;">
+                    <i class="fas fa-arrow-left me-2"></i>
+                    Back to Home
+                </a>
+  <div class="text-center mb-4 mb-lg-5 px-3">
+    
+    <h2 class="display-5 fw-bold mb-3 mb-lg-4" style = "background-color:linear-gradient(to right top, #6948c7, #7243d2, #7d3ddb, #8834e5, #9526ed);">Our Success Stories</h2>
+    <p class="fs-5 text-dark-50 mx-auto" style="max-width: 800px;">
+      Real businesses. Real transformations. Real results. See how we've helped local businesses dominate their markets through strategic Google Business Profile optimization.
+    </p>
+  </div>
+
+  <div class="case-study-card position-relative">
+    
+    <!-- Header -->
+    <div class="mb-4">
+      <h5 class="text-muted mb-2" >
+         Story 1 
+      </h5>
+      <h1 style = "color: var(--primary);">Multispeciality Clinic</h1>
+      <p class="text-muted mb-0">
+        <i class="bi bi-geo-alt"></i> Salem, TamilNadu &nbsp; • &nbsp; Healthcare
+      </p>
+    </div>
+
+    <!-- Story -->
+    <div class="row g-4">
+      <div class="col-12 story-section">
+        <h5>The Story</h5>
+        <p>A Trusted multi-speciality clinic in Salem wanted more visibility and patient walk-ins through Google.</p>
+
+        <h5>The Challenge</h5>
+        <p>The profile was incomplete, poorly ranked (85th), and lacked a professional look, making it hard for patients to trust or even find the clinic.</p>
+
+        <h5>Our Solution</h5>
+        <p>We completely transformed their Google Business Profile with professional photography, optimized descriptions, strategic keyword placement, and implemented a review generation system.</p>
+      </div>
+    </div>
+
+    <!-- Results -->
+    <div class="results-container">
+      <h3 class="fw-bold text-center mb-4">The Results</h3>
+
+      <div class="portfolio-cta">
+        <p class="mb-1" style="color: black;">Local Ranking</p>
+        <h1 style="color: var(--primary);">#85 → #3 </h1>
+        <p class="mb-0" style="color: black;">Improved the Ranking Organically</p>
+        </div>
+    </br>
+      
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="results-card">
+            <img src="./img/portfolio_img/2.svg" alt="Profile Views">
+            <div class="results-card-body">
+              <h4 class="text-success">+73%</h4>
+              <p class="mb-0">Profile Views</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="results-card">
+            <img src="./img/portfolio_img/4.svg" alt="Profile Inter">
+            <div class="results-card-body">
+              <h4 class="text-warning">50% → 88%</h4>
+              <p class="mb-0">Profile Interactions</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="results-card">
+            <img src="./img/portfolio_img/1.svg" alt="Customer Calls">
+            <div class="results-card-body">
+              <h4 class="text-success">100%</h4>
+              <p class="mb-0">Customer Calls</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="results-card">
+            <img src="./img/portfolio_img/3.svg" alt="Rating Increase">
+            <div class="results-card-body">
+              <h4 class="text-warning">+662%</h4>
+              <p class="mb-0">Search Views</p>
+            </div>
+          </div>
+        </div>
+        
+
+      </div>
+    </div>
+
+</br>
+    </div>
+</div>
+
+
+
+<!-- Services Section -->
+<div class="container-fluid px-0 py-5">
+  <div class="container py-5">
+    <!-- Review Management Excellence -->
+    <div class="row align-items-center mb-5">
+      <div class="col-lg-6 pe-lg-5">
+        <h2 class="display-6 mb-4">Review Management Excellence
+    
+        </h2>
+        <ul class="list-unstyled mb-4" >
+          <li class="d-flex align-items-start mb-3">
+            <i class="fas fa-splotch me-3 mt-1" style="color: var(--primary);"></i>
+            <span>Managed patient reviews for trust & SEO value.</span>
+          </li>
+          <li class="d-flex align-items-start mb-3">
+            <i class="fas fa-splotch me-3 mt-1" style="color: var(--primary);"></i>
+            <span>Helped generate more positive reviews.</span>
+          </li>
+          <li class="d-flex align-items-start mb-3">
+            <i class="fas fa-splotch me-3 mt-1" style="color: var(--primary);"></i>
+            <span>Built stronger client–patient relationship.</span>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-6">
+        <div class="service-image-card p-4 rounded-4 bg-white h-100" style="box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .08); ">
+          <img src="./img/portfolio_img/review_mgm_1.jpeg" alt="Review Management" class="img-fluid rounded-3" style="object-fit: cover; height: 100%; width: 100%;">
+        </div>
+      </div>
+    </div>
+
+    <!-- Creative & Brand Building -->
+    <div class="row align-items-center mb-5">
+      <div class="col-lg-6 order-lg-2 ps-lg-5">
+        <h2 class="display-6 mb-4">
+          Creative & Brand Building
+        </h2>
+        <ul class="list-unstyled mb-4">
+          <li class="d-flex align-items-start mb-3">
+            <i class="fas fa-chart-line me-3 mt-1" style="color: var(--primary);"></i>
+            <span>Custom graphic design for all digital platforms</span>
+          </li>
+          <li class="d-flex align-items-start mb-3">
+            <i class="fas fa-chart-line me-3 mt-1" style="color: var(--primary);"></i>
+            <span>Designed festive posts, client testimonial graphics, and engaging content.</span>
+          </li>
+          <li class="d-flex align-items-start mb-3">
+            <i class="fas fa-chart-line me-3 mt-1" style="color: var(--primary);"></i>
+            <span>Delivered a professional brand feel to the clinic’s online presence.</span>
+          </li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-6 order-lg-1">
+        <div class="service-image-card p-4 rounded-4 bg-white h-100" style="box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .08);">
+          <img src="./img/portfolio_img/brand_building_1.jpeg" alt="Creative & Brand Building" class="img-fluid rounded-3">
+        </div>
+      </div>
+    </div>
+
+    <!-- Ongoing Profile Maintenance -->
+    <div class="row align-items-center">
+      <div class="col-lg-6 pe-lg-5">
+        <h2 class="display-6 mb-4">
+          Profile Maintenance & Accuracy
+        </h2>
+        <ul class="list-unstyled mb-4">
+          <li class="d-flex align-items-start mb-3">
+            <i class="fas fa-user-alt me-3 mt-1" style="color: var(--primary);"></i>
+            <span>Kept opening hours updated → increased trust & reliability.</span>
+          </li>
+          <li class="d-flex align-items-start mb-3">
+            <i class="fas fa-user-alt me-3 mt-1" style="color: var(--primary);"></i>
+            <span>Delivered QR stand to help patients easily scan & review. </span>
+          </li>
+          <li class="d-flex align-items-start mb-3">
+            <i class="fas fa-user-alt me-3 mt-1" style="color: var(--primary);"></i>
+            <span>Gave the clinic a 360° digital presence.</span>
+          </li>
+          <li class="d-flex align-items-start mb-3">
+            <i class="fas fa-user-alt me-3 mt-1" style="color: var(--primary);"></i>
+            <span>Tailored content, analyzed trends, and suggested offers.</span>
+          </li>
+          <li class="d-flex align-items-start mb-3">
+            <i class="fas fa-user-alt me-3 mt-1" style="color: var(--primary);"></i>
+            <span>Made the profile look like a professional healthcare hub, not just a listing.</span>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-6">
+        <div class="service-image-card p-4 rounded-4 bg-white h-100" style="box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .08); ">
+          <img src="./img/portfolio_img/maintnenance_1.svg" alt="Profile Maintenance" class="img-fluid rounded-3">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--Story 2 start-->
+<div class="case-study-card position-relative">
+    
+    <!-- Header -->
+    <div class="mb-4">
+      <h5 class="text-muted mb-2" >
+         Story 2
+      </h5>
+      <h1 style = "color: var(--primary);">Face & Hair Clinic, Dermatology</h1>
+      <p class="text-muted mb-0">
+        <i class="bi bi-geo-alt"></i> Salem, TamilNadu &nbsp; • &nbsp; Healthcare
+      </p>
+    </div>
+
+    <!-- Story -->
+    <div class="row g-4">
+      <div class="col-12 story-section">
+        <h5>The Story</h5>
+        <p>A reputed face and hair clinic in Salem wanted to attract more patients through Google visibility and build a professional online identity.</p>
+
+        <h5>The Challenge</h5>
+        <p>They had no proper Google Business Profile earlier, low visibility (100+ ranking), and almost zero patient interactions online.</p>
+
+        <h5>Our Solution</h5>
+        <p>We created and optimized their profile from scratch, added professional visuals, managed reviews, and set up ongoing updates to position them as a trusted dermatology clinic in the city.</p>
+      </div>
+    </div>
+
+    <!-- Results -->
+    <div class="results-container">
+      <h3 class="fw-bold text-center mb-4">The Results</h3>
+
+      <div class="portfolio-cta">
+        <p class="mb-1" style="color: black;">Local Ranking</p>
+        <h1 style="color: var(--primary);">#100 → #10 </h1>
+        <p class="mb-0" style="color: black;">Improved the Ranking Organically</p>
+        </div>
+    </br>
+      
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="results-card">
+            <img src="./img/portfolio_img/2.Client2.svg" alt="Profile Views">
+            <div class="results-card-body">
+              <h4 class="text-success">+500</h4>
+              <p class="mb-0">Profile Views</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="results-card">
+            <img src="./img/portfolio_img/3.Client2.svg" alt="Profile Inter">
+            <div class="results-card-body">
+              <h4 class="text-warning">+70</h4>
+              <p class="mb-0">Profile Interactions</p>
+            </div>
+          </div>
+        </div>
+        
+        
+
+      </div>
+    </div>
+
+</br>
+    </div>
+</div>
+
+
+
+<!-- Services Section -->
+<div class="container-fluid px-0 py-5">
+  <div class="container py-5">
+    <!-- Review Management Excellence -->
+    <div class="row align-items-center mb-5">
+      <div class="col-lg-6 pe-lg-5">
+        <h2 class="display-6 mb-4">Review Management Excellence
+    
+        </h2>
+        <ul class="list-unstyled mb-4" >
+          <li class="d-flex align-items-start mb-3">
+            <i class="fas fa-splotch me-3 mt-1" style="color: var(--primary);"></i>
+            <span>Helped generate reviews for trust, credibility, and SEO value.</span>
+          </li>
+          <li class="d-flex align-items-start mb-3">
+            <i class="fas fa-splotch me-3 mt-1" style="color: var(--primary);"></i>
+            <span>Improved patient engagement & reputation.</span>
+          </li>
+          <li class="d-flex align-items-start mb-3">
+            <i class="fas fa-splotch me-3 mt-1" style="color: var(--primary);"></i>
+            <span>Built stronger client–patient relationship.</span>
+          </li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-6">
+        <div class="service-image-card p-4 rounded-4 bg-white h-100" style="box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .08); ">
+          <img src="./img/portfolio_img/4.Client2.svg" alt="Review Management" class="img-fluid rounded-3" style="object-fit: cover; height: 100%; width: 100%;">
+        </div>
+      </div>
+    </div>
+
+    <!-- Creative & Brand Building -->
+    <div class="row align-items-center mb-5">
+      <div class="col-lg-6 order-lg-2 ps-lg-5">
+        <h2 class="display-6 mb-4">
+          Creative & Brand Building
+        </h2>
+        <ul class="list-unstyled mb-4">
+          <li class="d-flex align-items-start mb-3">
+            <i class="fas fa-chart-line me-3 mt-1" style="color: var(--primary);"></i>
+            <span>Custom graphic design for all digital platforms</span>
+          </li>
+          <li class="d-flex align-items-start mb-3">
+            <i class="fas fa-chart-line me-3 mt-1" style="color: var(--primary);"></i>
+            <span>Designed festive posts, client testimonial graphics, and engaging content.</span>
+          </li>
+          <li class="d-flex align-items-start mb-3">
+            <i class="fas fa-chart-line me-3 mt-1" style="color: var(--primary);"></i>
+            <span>Delivered a professional brand feel to the clinic’s online presence.</span>
+          </li>
+          <li class="d-flex align-items-start mb-3">
+            <i class="fas fa-chart-line me-3 mt-1" style="color: var(--primary);"></i>
+            <span>Kept opening hours updated → increased trust & reliability.</span>
+          </li>
+          <li class="d-flex align-items-start mb-3">
+            <i class="fas fa-chart-line me-3 mt-1" style="color: var(--primary);"></i>
+            <span>Delivered 360° digital support → content creation, trend analysis, tailored offers.</span>
+          </li>
+          <li class="d-flex align-items-start mb-3">
+            <i class="fas fa-chart-line me-3 mt-1" style="color: var(--primary);"></i>
+            <span>Profile changed from “empty listing” → professional healthcare presence.</span>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-6 order-lg-1">
+        <div class="service-image-card p-4 rounded-4 bg-white h-100" style="box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .08);">
+          <img src="./img/portfolio_img/1.client2.svg" alt="Creative & Brand Building" class="img-fluid rounded-3">
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+</div>
+<!--Story 2 End-->
+
+<!--Story 3 start-->
+<div class="case-study-card position-relative">
+    
+    <!-- Header -->
+    <div class="mb-4">
+      <h5 class="text-muted mb-2" >
+         Story 3
+      </h5>
+      <h1 style = "color: var(--primary);">Dental Clinic, Erode – Healthcare</h1>
+      <p class="text-muted mb-0">
+        <i class="bi bi-geo-alt"></i> Erode, TamilNadu &nbsp; • &nbsp; Healthcare
+      </p>
+    </div>
+
+    <!-- Story -->
+    <div class="row g-4">
+      <div class="col-12 story-section">
+        <h5>The Story</h5>
+        <p>A trusted dental clinic in Erode wanted to increase online visibility and attract more patients through Google.</p>
+
+        <h5>The Challenge</h5>
+        <p>The clinic had no strong online presence, ranking 100+, very few interactions, and at one point the account even got suspended due to client-side errors.</p>
+
+        <h5>Our Solution</h5>
+        <p>We recovered the account within 48 hours, optimized their Google Business Profile, managed reviews, and ensured steady growth in visibility, calls, and patient interactions.</p>
+      </div>
+    </div>
+
+    <!-- Results -->
+    <div class="results-container">
+      <h3 class="fw-bold text-center mb-4">The Results</h3>
+
+      <div class="portfolio-cta">
+        <p class="mb-1" style="color: black;">Local Ranking</p>
+        <h1 style="color: var(--primary);">#100 → #15 </h1>
+        <p class="mb-0" style="color: black;">Improved the Ranking Organically</p>
+        </div>
+    </br>
+      
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="results-card">
+            <img src="./img/portfolio_img/1.Client3.svg" alt="Profile Views">
+            <div class="results-card-body">
+              <h4 class="text-success">+300</h4>
+              <p class="mb-0">Profile Views(In One Month)</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="results-card">
+            <img src="./img/portfolio_img/2.Client3.svg" alt="Profile Inter">
+            <div class="results-card-body">
+              <h4 class="text-warning">+85</h4>
+              <p class="mb-0">Profile Interactions (In Just 80 days)</p>
+            </div>
+          </div>
+        </div>
+        
+        
+
+      </div>
+    </div>
+
+</br>
+    </div>
+</div>
+
+
+
+<!-- Services Section -->
+<div class="container-fluid px-0 py-5">
+  <div class="container py-5">
+    <!-- Creative & Brand Building -->
+    <div class="row align-items-center mb-5">
+      <div class="col-lg-6 order-lg-2 ps-lg-5">
+        <h2 class="display-6 mb-4">
+          Account Suspension & Recovery (Unique Story)
+        </h2>
+        <p>
+            <h5 >Cons:</h5> Account suspension created temporary visibility loss. Patients couldn’t find the clinic online during that time.
+        </p>
+        <p>
+            <h5 >Pros:</h5> Quick recovery (within 48 hours) showed our strong expertise & problem-solving. The clinic regained visibility without losing long-term growth momentum.
+        </p>
+        <h5>Setback:</h5>
+        <p>The account was suspended due to client-side errors, which caused a temporary loss of visibility.</br> During this period, patients were unable to find the clinic on Google, resulting in missed opportunities.</p>
+        <h5>Our Response:</h5>
+        <ul class="list-unstyled mb-4">
+          <li class="d-flex align-items-start mb-3">
+            <i class="fas fa-chart-line me-3 mt-1" style="color: var(--primary);"></i>
+            <span>Recovered the account within 48 hours, showcasing our expertise and quick problem-solving.</span>
+          </li>
+          <li class="d-flex align-items-start mb-3">
+            <i class="fas fa-chart-line me-3 mt-1" style="color: var(--primary);"></i>
+            <span>Implemented preventive measures to avoid future suspensions.</span>
+          </li>
+          <li class="d-flex align-items-start mb-3">
+            <i class="fas fa-chart-line me-3 mt-1" style="color: var(--primary);"></i>
+            <span>Optimized the profile immediately after recovery to regain momentum.</span>
+          </li>
+          <li class="d-flex align-items-start mb-3">
+            <i class="fas fa-chart-line me-3 mt-1" style="color: var(--primary);"></i>
+            <span>Ensured the clinic’s long-term growth was not just restored but accelerated.</span>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-6 order-lg-1">
+        <div class="service-image-card p-4 rounded-4 bg-white h-100" style="box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .08);">
+          <img src="./img/portfolio_img/6.Client3 (1).svg" alt="Creative & Brand Building" class="img-fluid rounded-3">
+        </div>
+      </div>
+    </div>
+    <!-- Review Management Excellence -->
+    <div class="row align-items-center mb-5">
+      <div class="col-lg-6 pe-lg-5">
+        <h2 class="display-6 mb-4">Review Management Excellence
+    
+        </h2>
+        <ul class="list-unstyled mb-4" >
+          <li class="d-flex align-items-start mb-3">
+            <i class="fas fa-splotch me-3 mt-1" style="color: var(--primary);"></i>
+            <span>Managed patient reviews for trust & SEO value.</span>
+          </li>
+          <li class="d-flex align-items-start mb-3">
+            <i class="fas fa-splotch me-3 mt-1" style="color: var(--primary);"></i>
+            <span>Helped generate more positive reviews.</span>
+          </li>
+          <li class="d-flex align-items-start mb-3">
+            <i class="fas fa-splotch me-3 mt-1" style="color: var(--primary);"></i>
+            <span>Built stronger client–patient relationship.</span>
+          </li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-6">
+        <div class="service-image-card p-4 rounded-4 bg-white h-100" style="box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .08); ">
+          <img src="./img/portfolio_img/5.Client3.svg" alt="Review Management" class="img-fluid rounded-3" style="object-fit: cover; height: 100%; width: 100%;">
+        </div>
+      </div>
+    </div>
+
+    
+
+    
+  </div>
+</div>
+<!--Story 3 End-->
+
+
+<!-- CTA Section -->
+<div class="container my-5">
+  <div class="cta py-5 px-4" style="background: linear-gradient(90deg, #6406b1, #8d2af1);  border-radius: 12px; text-align: center; color: white;">
+    <h2 class="display-6 text-white mb-3">Ready to Write Your Success Story?</h2>
+    <p class="fs-5 mb-4">Let's transform your business profile and unlock your growth potential</p>
+    <a href="index.html#contact" class="btn  btn-lg px-4 py-2" style="background-color: rgb(225, 203, 242);">Get Your Free Audit Now</a>
+  </div>
+</div>
+
+<!-- JavaScript Libraries -->
+</div>
+<!-- Footer Start -->
+        <div class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5">
+                    <div class="col-md-7 col-lg-4 ">
+                        <a href="#" class="d-flex align-items-center justify-content-center mb-4">
+                            <img src="img/logo2 (2).png" alt="Logo" style="height: 90px; width: auto;">
+                        </a>
+                        <p class="mb-4 text-center">Elevating Presence Through </br>Our Brand Growth Suite</p>
+                        <div class="d-flex pt-2 align-items-center justify-content-center">
+                            <a class="btn btn-outline-light btn-social me-2" href="mailto:connect@mapmystore.com"><i class="fa fa-envelope"></i></a>
+                            <a class="btn btn-outline-light btn-social me-2" href="tel:+917358588788"><i class="fa fa-phone"></i></a>
+                            <a class="btn btn-outline-light btn-social me-2" href="https://www.linkedin.com/company/mapmystore/"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-outline-light btn-social me-2" href="https://wa.me/917358588788"><i class="fab fa-whatsapp"></i></a>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-lg-2">
+                        <h4 class="text-white ml-4 mb-4">Quick Links</h4>
+                        <a class="btn btn-link text-light" style="text-decoration: none;" href="index.html">Home</a>
+                        <a class="btn btn-link text-light" style="text-decoration: none;" href="index.html#about">About</a>
+                        <a class="btn btn-link text-light" style="text-decoration: none;" href="index.html#services">Services</a>
+                        <a class="btn btn-link text-light" style="text-decoration: none;" href="index.html#speciality">Why Us</a>
+                        <a class="btn btn-link text-light" style="text-decoration: none;" href="index.html#contact">Contact</a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h4 class="text-white mb-4">Our Services</h4>
+                        <a class="btn btn-link text-light" style="text-decoration: none;" href="index.html#services">GBP Optimization</a>
+                        <a class="btn btn-link text-light" style="text-decoration: none;" href="index.html#services">Content Creation</a>
+                        <a class="btn btn-link text-light" style="text-decoration: none;" href="index.html#services">Brand Strategy</a>
+                        <a class="btn btn-link text-light" style="text-decoration: none;" href="index.html#services">Social Media Management</a>
+                        <a class="btn btn-link text-light" style="text-decoration: none;" href="index.html#services">Analytics & Insights</a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h4 class="text-white mb-4">Contact Info</h4>
+                        <a class="text-light" style="text-decoration: none;" href="mailto:connect@mapmystore.com"><i class="fa fa-envelope me-3 mb-3"></i>connect@mapmystore.com</a></br>
+                        <a class="text-light mb-5 mt-5" style="text-decoration: none;" href="tel:+917358588788"><i class="fa fa-phone me-3 mb-3"></i>+91 7358588788</a></br>
+                        <a><i class="fa fa-map-marker-alt me-3"></i>Chennai, India</a>
+                        
+                    </div>
+                    <!-- <div class="col-md-6 col-lg-3">
+                        <h4 class="text-white mb-4">Quick Link</h4>
+                        <a class="btn btn-link" href="">About Us</a>
+                        <a class="btn btn-link" href="">Contact Us</a>
+                        <a class="btn btn-link" href="">Privacy Policy</a>
+                        <a class="btn btn-link" href="">Terms & Condition</a>
+                        <a class="btn btn-link" href="">Career</a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h4 class="text-white mb-4">Popular Link</h4>
+                        <a class="btn btn-link" href="">About Us</a>
+                        <a class="btn btn-link" href="">Contact Us</a>
+                        <a class="btn btn-link" href="">Privacy Policy</a>
+                        <a class="btn btn-link" href="">Terms & Condition</a>
+                        <a class="btn btn-link" href="">Career</a>
+                    </div> -->
+                    <!-- <div class="col-md-6 col-lg-3">
+                        <h4 class="text-white mb-4">Newsletter</h4>
+                        <p>Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulpu</p>
+                        <div class="position-relative w-100 mt-3">
+                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Your Email" style="height: 48px;">
+                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary-gradient fs-4"></i></button>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <!-- <div class="container px-lg-5">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.  -->
+              
+              <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+              <!-- Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="">Home</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+
+    <!-- Image Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-transparent border-0">
+          <div class="modal-header border-0 p-2">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-0 text-center">
+            <img src="" id="modalImage" class="img-fluid rounded-3" alt="Full size image">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap Icons for placeholders -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+<!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/wow/wow.min.js"></script>
+    <script src="../lib/easing/easing.min.js"></script>
+    <script src="../lib/waypoints/waypoints.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+  
+</body>
+</html>

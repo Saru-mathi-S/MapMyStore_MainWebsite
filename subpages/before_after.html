@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Local Café - Case Study</title>
+  <!-- Favicon -->
+    <link href="img/mms_logo.png" rel="icon">
+
+   <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&family=DynaPuff:wght@400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Ephesis&family=Luckiest+Guy&family=Matemasie&family=Protest+Revolution&family=Rubik+Moonrocks&family=Ribeye&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+   
+
+    <!-- Icon Font Stylesheet -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet"> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <!-- <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet"> -->
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #6948c7;
+    --secondary:#a75ce4 ;
+      --light: #F0F6FF;
+      --dark: #262B47;
+    }
+    body {
+      background-color: var(--light);
+      font-family: 'Merriweather', serif;
+    }
+    .case-study-card {
+      background-image: radial-gradient(circle, #f6ddfa, #f7dffa, #f7e0f9, #f8e2f9, #f8e4f9, #f5e6fb, #f1e7fd, #eee9fe, #e7ecff, #e2eefe, #dff0fb, #def1f8);
+      border-radius: 24px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+      box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .08);
+      transition: .5s;
+    }
+    .case-study-card:hover {
+      box-shadow: 0 .5rem 2rem rgba(0, 0, 0, .15);
+    }
+    .story-section h2 {
+      font-size: 32px;
+      font-weight: 700;
+      color: black;
+      margin-bottom: 16px;
+      background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.74),rgba(0, 0, 0, 0.735));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .story-section p {
+      color: var(--dark);
+      font-size: 16px;
+      line-height: 1.8;
+    }
+    .tag-before {
+      background: linear-gradient(to bottom right, var(--primary), var(--secondary));
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 4px 16px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+    .image-section {
+      background: var(--light);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, .05);
+    }
+    .image-container {
+      background: #fff;
+      border-radius: 12px;
+      height: 400px;
+      width: 100%;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    .case-study-image {
+      border-radius: 12px;
+      transition: transform 0.5s ease;
+    }
+    .case-study-image:hover {
+      transform: scale(1.02);
+    }
+    .btn-toggle {
+      padding: 10px 20px;
+      border-radius: 12px;
+      font-weight: 500;
+      font-size: 15px;
+      transition: .5s;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+    .btn-toggle.active {
+      background: linear-gradient(to bottom right, var(--primary), var(--secondary));
+      color: white;
+    }
+    .btn-toggle:not(.active) {
+      background: var(--light);
+      color: var(--dark);
+    }
+    .btn-toggle:not(.active):hover {
+      background: linear-gradient(to bottom right, var(--primary), var(--secondary));
+      color: white;
+      opacity: 0.9;
+    }
+    .carousel-controls {
+      position: absolute;
+      top: 40px;
+      right: 40px;
+      display: flex;
+      gap: 8px;
+    }
+    .carousel-controls button {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(to bottom right, var(--primary), var(--secondary));
+      color: #fff;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: .5s;
+    }
+    .carousel-controls button:hover {
+      background: linear-gradient(to bottom right, var(--secondary), var(--primary));
+      transform: translateY(-2px);
+    }
+    .location-info {
+      color: var(--dark);
+      font-size: 15px;
+      opacity: 0.8;
+    }
+    .text-primary-gradient {
+      background: linear-gradient(to bottom right, var(--primary), var(--secondary));
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .text-dark-50 {
+      color: var(--dark);
+      opacity: 0.8;
+    }
+    .display-5{
+        font-size: 3.8rem;
+    }
+
+    .cta-portfolio {
+      background-image: radial-gradient(circle, #6948c7, #6948c7, #6948c7, #6948c7, #6948c7, #6e4ac9, #744bcc, #794dce, #8551d4, #9054d9, #9c58df, #a75ce4);
+      padding: 2rem;
+      border-radius: 1rem;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .cta-portfolio strong {
+      color: #ffc300;
+    }
+    .cta-portfolio p {
+      color: #ddd;
+      margin: 1rem 0;
+    }
+    .cta-portfolio button {
+      background: #ffb400;
+      color: #000;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 2rem;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .cta-portfolio button:hover {
+      background: #ffc900;
+    }
+
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .container {
+        padding: 15px;
+      }
+      
+      .case-study-card {
+        padding: 25px;
+        border-radius: 20px;
+      }
+
+      .story-section h2 {
+        font-size: 24px;
+        margin-bottom: 12px;
+      }
+
+      .story-section p {
+        font-size: 15px;
+        line-height: 1.6;
+      }
+
+      .image-container {
+        height: 300px;
+      }
+
+      .btn-toggle {
+        padding: 8px 16px;
+        font-size: 14px;
+      }
+
+      .carousel-controls {
+        top: 20px;
+        right: 20px;
+      }
+
+      .carousel-controls button {
+        width: 36px;
+        height: 36px;
+      }
+
+      .results-container {
+        margin-top: 32px;
+      }
+
+      .results-container h2 {
+        font-size: 24px;
+        margin-bottom: 24px;
+      }
+
+      .results-box {
+        padding: 16px;
+      }
+
+      .results-box h3 {
+        font-size: 24px;
+      }
+
+      .results-box p {
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .case-study-card {
+        padding: 20px;
+      }
+
+      .display-5 {
+        font-size: 28px;
+      }
+
+      .fs-5 {
+        font-size: 15px !important;
+      }
+
+      .image-container {
+        height: 250px;
+      }
+
+      .d-flex.gap-3 {
+        gap: 0.5rem !important;
+      }
+
+      .btn-toggle {
+        padding: 8px 12px;
+        font-size: 13px;
+      }
+
+      .results-container .row {
+        --bs-gutter-x: 0.75rem;
+      }
+
+      .results-box {
+        padding: 12px;
+        margin-bottom: 10px;
+      }
+
+      .results-box h3 {
+        font-size: 20px;
+      }
+
+      .results-box p {
+        font-size: 12px;
+      }
+
+      .carousel-controls {
+        top: 15px;
+        right: 15px;
+      }
+
+      .carousel-controls button {
+        width: 32px;
+        height: 32px;
+      }
+
+      .carousel-controls span {
+        font-size: 14px;
+      }
+    }
+    
+    /* Add smooth scroll behavior */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Improve touch interactions on mobile */
+    @media (hover: none) {
+      .case-study-image:hover {
+        transform: none;
+      }
+
+      .btn-toggle {
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      .case-study-card:hover {
+        box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .08);
+      }
+    }
+    .results-container {
+      margin-top: 48px;
+    }
+    .results-container h2 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 32px;
+      text-align: center;
+    }
+    .results-box {
+      background: #fff;
+      border-radius: 16px;
+      padding: 24px;
+      text-align: center;
+    }
+    .results-box h3 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .results-box.profile-views h3 { color: #111827; }
+    .results-box.customer-calls h3 { color: #10B981; }
+    .results-box.rating h3 { color: #F59E0B; }
+    .results-box.ranking h3 { color: #3B82F6; }
+    .results-box p {
+      color: #6B7280;
+      font-size: 15px;
+      margin: 0;
+    }
+
+    /*** Navbar ***/
+.navbar-light .navbar-nav .nav-link {
+    position: relative;
+    margin-right: 25px;
+    padding: 40px 0;
+    font-family: "Merriweather", serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--dark) !important;
+    outline: none;
+    transition: .5s;
+}
+
+    .navbar-light .navbar-nav .nav-link::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 15px solid;
+    border-color: var(--primary) transparent transparent transparent;
+    transition: all .5s ease;
+}
+
+  </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51" class="bg-white">
+<!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0" id="home">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-6 py-2 py-lg-0" style="color: black">
+                <a href="#" class="navbar-brand d-flex align-items-center gap-2 p-0">
+<img src="img/main_logo.webp" alt="Logo" style="height: 90px !important; width: auto;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-describedby="Toggle navigation">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto py-0">
+                        <a href="#home" class="nav-item nav-link active" onclick="document.querySelector('.hero-header').scrollIntoView({behavior: 'smooth'})">Home</a>
+                        <a href="#about" class="nav-item nav-link" onclick="document.querySelector('#about').scrollIntoView({behavior: 'smooth'})">About</a>
+                        <a href="#speciality" class="nav-item nav-link" onclick="document.querySelector('#speciality').scrollIntoView({behavior: 'smooth'})">Why Us</a>
+                        <a href="#services" class="nav-item nav-link" onclick="document.querySelector('#services').scrollIntoView({behavior: 'smooth'})">Services</a>
+                        <!-- <a href="#pricing" class="nav-item nav-link" onclick="document.querySelector('#pricing').scrollIntoView({behavior: 'smooth'})">Pricing</a> -->
+                        <a href="#contact" class="nav-item nav-link" onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})">Contact</a>
+                    </div>
+                    <a href="#contact" class="btn btn-primary-gradient btn-glow py-2 px-4 ms-3 d-none d-lg-block" style="font-family: 'Merriweather'; border-radius: 13px !important;">Contact Us</a>
+                </div>
+            </nav>
+<div class="container my-5">
+  <!-- Success Stories Header -->
+  <div class="text-center mb-4 mb-lg-5 px-3">
+    <h2 class="display-5 fw-bold mb-3 mb-lg-4" style = "background-color:linear-gradient(to right top, #6948c7, #7243d2, #7d3ddb, #8834e5, #9526ed);">Our Success Stories</h2>
+    <p class="fs-5 text-dark-50 mx-auto" style="max-width: 800px;">
+      Real businesses. Real transformations. Real results. See how we've helped local businesses dominate their markets through strategic Google Business Profile optimization.
+    </p>
+  </div>
+
+  <div class="case-study-card position-relative">
+    
+    <!-- Carousel Controls -->
+    <div class="carousel-controls">
+      <button id="prevButton" aria-label="Previous case study">&larr;</button>
+      <button id="nextButton" aria-label="Next case study">&rarr;</button>
+      <span class="ms-3">1 / 3</span>
+    </div>
+
+    <!-- Header -->
+    <div class="mb-4">
+      <h1 class="h2 fw-bold mb-2">The Local Café</h1>
+      <p class="location-info">
+        <i class="bi bi-geo-alt"></i> Downtown District &nbsp; • &nbsp; Restaurant & Café
+      </p>
+    </div>
+
+    <!-- Content -->
+    <div class="row g-5">
+      <!-- Left Section -->
+      <div class="col-lg-6">
+        <div class="image-section">
+          <span id="imageTag" class="tag-before">BEFORE</span>
+          <div class="image-container position-relative">
+            <img id="caseStudyImage" src="img/storefront_GMB.png" alt="Case study before image" class="case-study-image w-100 h-100 object-fit-cover">
+          </div>
+        </div>
+        <div class="d-flex gap-3">
+          <button class="btn btn-toggle active flex-grow-1" onclick="switchImage('before')">Show Before</button>
+          <button class="btn btn-toggle flex-grow-1" onclick="switchImage('after')">Show After</button>
+        </div>
+      </div>
+
+      <!-- Right Section -->
+      <div class="col-lg-6 story-section">
+        <h2 >The Story</h2>
+        <p class="mb-4">A cozy neighborhood café struggling to compete with chain coffee shops. Despite serving exceptional coffee and homemade pastries, they remained invisible in local searches.</p>
+
+        <h2 >The Challenge</h2>
+        <p class="mb-4">Low visibility in Google searches, inconsistent business information, outdated photos, and minimal customer engagement online.</p>
+
+        <h2>Our Solution</h2>
+        <p>We completely transformed their Google Business Profile with professional photography, optimized descriptions, strategic keyword placement, and implemented a review generation system.</p>
+      </div>
+    </div>
+
+    <!-- Results -->
+    <div class="results-container">
+      <h2 class="mb-4">The Results</h2>
+      <div class="row row-cols-2 row-cols-md-4 g-3 g-md-4">
+        <div class="col">
+          <div class="results-box profile-views h-100">
+            <h3>+347%</h3>
+            <p>Profile Views</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="results-box customer-calls h-100">
+            <h3>+215%</h3>
+            <p>Customer Calls</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="results-box rating h-100">
+            <h3>4.2 → 4.8</h3>
+            <p>Rating Increase</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="results-box ranking h-100">
+            <h3>#8 → #1</h3>
+            <p>Local Ranking</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</br>
+    </div>
+</div>
+
+
+
+<!-- Services Section -->
+<div class="container-fluid px-0 py-5">
+  <div class="container py-5">
+    <!-- Review Management Excellence -->
+    <div class="row align-items-center mb-5">
+      <div class="col-lg-6 pe-lg-5">
+        <h2 class="display-6 mb-4">
+          <span class="text-primary">Review</span> 
+          <span class="text-primary-gradient">Management</span> 
+          <span class="text-purple">Excellence</span>
+        </h2>
+        <ul class="list-unstyled mb-4">
+          <li class="d-flex align-items-start mb-3">
+            <i class="bi bi-star-fill me-3 mt-1" style="color: var(--primary);"></i>
+            <span>Strategic review generation campaigns that boost credibility</span>
+          </li>
+          <li class="d-flex align-items-start mb-3">
+            <i class="bi bi-chat-dots-fill me-3 mt-1" style="color: var(--primary);"></i>
+            <span>Professional response management to every review</span>
+          </li>
+          <li class="d-flex align-items-start mb-3">
+            <i class="bi bi-shield-check me-3 mt-1" style="color: var(--primary);"></i>
+            <span>Reputation monitoring and crisis management</span>
+          </li>
+          <li class="d-flex align-items-start mb-3">
+            <i class="bi bi-graph-up me-3 mt-1" style="color: var(--primary);"></i>
+            <span>Review analytics and sentiment tracking</span>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-6">
+        <div class="service-image-card p-4 rounded-4 bg-white h-100" style="box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .08);">
+          <img src="img/business_hoursPage.png" alt="Review Management" class="img-fluid rounded-3">
+        </div>
+      </div>
+    </div>
+
+    <!-- Creative & Brand Building -->
+    <div class="row align-items-center mb-5">
+      <div class="col-lg-6 order-lg-2 ps-lg-5">
+        <h2 class="display-6 mb-4">
+          <span class="text-primary-gradient">Creative</span> & 
+          <span class="text-primary">Brand</span> 
+          <span class="text-purple">Building</span>
+        </h2>
+        <ul class="list-unstyled mb-4">
+          <li class="d-flex align-items-start mb-3">
+            <i class="bi bi-brush me-3 mt-1" style="color: var(--primary);"></i>
+            <span>Custom graphic design for all digital platforms</span>
+          </li>
+          <li class="d-flex align-items-start mb-3">
+            <i class="bi bi-pencil-square me-3 mt-1" style="color: var(--primary);"></i>
+            <span>SEO-optimized content creation and storytelling</span>
+          </li>
+          <li class="d-flex align-items-start mb-3">
+            <i class="bi bi-palette me-3 mt-1" style="color: var(--primary);"></i>
+            <span>Brand identity development and guidelines</span>
+          </li>
+          <li class="d-flex align-items-start mb-3">
+            <i class="bi bi-camera me-3 mt-1" style="color: var(--primary);"></i>
+            <span>Professional photography and visual assets</span>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-6 order-lg-1">
+        <div class="service-image-card p-4 rounded-4 bg-white h-100" style="box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .08);">
+          <img src="img/storefront_GMB.png" alt="Creative & Brand Building" class="img-fluid rounded-3">
+        </div>
+      </div>
+    </div>
+
+    <!-- Ongoing Profile Maintenance -->
+    <div class="row align-items-center">
+      <div class="col-lg-6 pe-lg-5">
+        <h2 class="display-6 mb-4">
+          <span class="text-primary">Ongoing</span> 
+          <span class="text-primary-gradient">Profile</span> 
+          <span class="text-purple">Maintenance</span>
+        </h2>
+        <ul class="list-unstyled mb-4">
+          <li class="d-flex align-items-start mb-3">
+            <i class="bi bi-gear me-3 mt-1" style="color: var(--primary);"></i>
+            <span>Regular profile updates and optimization</span>
+          </li>
+          <li class="d-flex align-items-start mb-3">
+            <i class="bi bi-bar-chart me-3 mt-1" style="color: var(--primary);"></i>
+            <span>Performance tracking and monthly reporting</span>
+          </li>
+          <li class="d-flex align-items-start mb-3">
+            <i class="bi bi-binoculars me-3 mt-1" style="color: var(--primary);"></i>
+            <span>Competitor monitoring and market insights</span>
+          </li>
+          <li class="d-flex align-items-start mb-3">
+            <i class="bi bi-calendar-check me-3 mt-1" style="color: var(--primary);"></i>
+            <span>Strategic posting and content calendar management</span>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-6">
+        <div class="service-image-card p-4 rounded-4 bg-white h-100" style="box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .08);">
+          <img src="img/business_name_page.png" alt="Profile Maintenance" class="img-fluid rounded-3">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Full Width CTA Section -->
+<div class="container-fluid px-0 mt-5">
+  <div class="py-5" style="background-image: radial-gradient(circle, #e8cfec, #ebd1ef, #eed4f2, #f2d6f5, #f5d9f8, #f1ddfb, #eee0fe, #ebe4ff, #e3e8ff, #ddecff, #dbeffd, #dcf1f9);">
+    <div class="container">
+      <div class="text-center py-4">
+        <h2 class="display-5 fw-bold text-primary-gradient mb-4">Ready to Write Your Success Story?</h2>
+        <p class="fs-4 text-dark-50 mx-auto" style="max-width: 700px;">
+          Let's transform your business profile and unlock your growth potential
+        </p>
+        <a href="index.html#contact" class="btn btn-primary-gradient btn-glow py-3 px-5 mt-4" style="font-family: 'Merriweather'; border-radius: 13px !important;">
+          Get Your Free Audit Now
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript Libraries -->
+</div>
+<!-- Footer Start -->
+        <div class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5">
+                    <div class="col-md-7 col-lg-4 ">
+                        <a href="#" class="d-flex align-items-center justify-content-center mb-4">
+                            <img src="img/logo2 (2).png" alt="Logo" style="height: 90px; width: auto;">
+                        </a>
+                        <p class="mb-4 text-center">Elevating Presence Through </br>Our Brand Growth Suite</p>
+                        <div class="d-flex pt-2 align-items-center justify-content-center">
+                            <a class="btn btn-outline-light btn-social me-2" href="mailto:connect@mapmystore.com"><i class="fa fa-envelope"></i></a>
+                            <a class="btn btn-outline-light btn-social me-2" href="tel:+917358588788"><i class="fa fa-phone"></i></a>
+                            <a class="btn btn-outline-light btn-social me-2" href="https://www.linkedin.com/company/mapmystore/"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-outline-light btn-social me-2" href="https://wa.me/917358588788"><i class="fab fa-whatsapp"></i></a>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-lg-2">
+                        <h4 class="text-white ml-4 mb-4">Quick Links</h4>
+                        <a class="btn btn-link text-light" href="#home">Home</a>
+                        <a class="btn btn-link text-light" href="#about">About</a>
+                        <a class="btn btn-link text-light" href="#services">Services</a>
+                        <a class="btn btn-link text-light" href="#speciality">Why Us</a>
+                        <a class="btn btn-link text-light" href="#contact">Contact</a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h4 class="text-white mb-4">Our Services</h4>
+                        <a class="btn btn-link text-light" href="#services">GBP Optimization</a>
+                        <a class="btn btn-link text-light" href="#services">Content Creation</a>
+                        <a class="btn btn-link text-light" href="#services">Brand Strategy</a>
+                        <a class="btn btn-link text-light" href="#services">Social Media Management</a>
+                        <a class="btn btn-link text-light" href="#services">Analytics & Insights</a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h4 class="text-white mb-4">Contact Info</h4>
+                        <a class="text-light"  href="mailto:connect@mapmystore.com"><i class="fa fa-envelope me-3 mb-3"></i>connect@mapmystore.com</a></br>
+                        <a class="text-light mb-5 mt-5" href="tel:+917358588788"><i class="fa fa-phone me-3 mb-3"></i>+91 7358588788</a></br>
+                        <a><i class="fa fa-map-marker-alt me-3"></i>Chennai, India</a>
+                        
+                    </div>
+                    <!-- <div class="col-md-6 col-lg-3">
+                        <h4 class="text-white mb-4">Quick Link</h4>
+                        <a class="btn btn-link" href="">About Us</a>
+                        <a class="btn btn-link" href="">Contact Us</a>
+                        <a class="btn btn-link" href="">Privacy Policy</a>
+                        <a class="btn btn-link" href="">Terms & Condition</a>
+                        <a class="btn btn-link" href="">Career</a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h4 class="text-white mb-4">Popular Link</h4>
+                        <a class="btn btn-link" href="">About Us</a>
+                        <a class="btn btn-link" href="">Contact Us</a>
+                        <a class="btn btn-link" href="">Privacy Policy</a>
+                        <a class="btn btn-link" href="">Terms & Condition</a>
+                        <a class="btn btn-link" href="">Career</a>
+                    </div> -->
+                    <!-- <div class="col-md-6 col-lg-3">
+                        <h4 class="text-white mb-4">Newsletter</h4>
+                        <p>Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulpu</p>
+                        <div class="position-relative w-100 mt-3">
+                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Your Email" style="height: 48px;">
+                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary-gradient fs-4"></i></button>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <!-- <div class="container px-lg-5">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.  -->
+              
+              <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+              <!-- Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="">Home</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <!-- Footer End -->
+
+<!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap Icons for placeholders -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <script>
+    // Case studies data
+    const caseStudies = [
+      {
+        title: "Multispeciality Clinic",
+        location: "Salem, Tamil Nadu",
+        category: "Healthcare",
+        story: "A cozy neighborhood café struggling to compete with chain coffee shops. Despite serving exceptional coffee and homemade pastries, they remained invisible in local searches.",
+        challenge: "Low visibility in Google searches, inconsistent business information, outdated photos, and minimal customer engagement online.",
+        solution: "We completely transformed their Google Business Profile with professional photography, optimized descriptions, strategic keyword placement, and implemented a review generation system.",
+        images: {
+          before: 'img/storefront_GMB.png',
+          after: 'img/businessCategory.png'
+        },
+        results: {
+          profileViews: "+347%",
+          customerCalls: "+215%",
+          rating: "4.2 → 4.8",
+          ranking: "#8 → #1"
+        }
+      },
+      {
+        title: "Fresh Fitness",
+        location: "Suburban Plaza",
+        category: "Fitness & Wellness",
+        story: "A boutique fitness studio with exceptional trainers and programs, but struggling to attract new members in a competitive market.",
+        challenge: "Limited online visibility, outdated business information, and difficulty showcasing their unique fitness programs and facility.",
+        solution: "Implemented a comprehensive GBP optimization strategy with high-quality photos, detailed service descriptions, and an active post schedule.",
+        images: {
+          before: 'img/business_hoursPage.png',
+          after: 'img/business_name_page.png'
+        },
+        results: {
+          profileViews: "+285%",
+          customerCalls: "+198%",
+          rating: "4.0 → 4.9",
+          ranking: "#12 → #2"
+        }
+      },
+      {
+        title: "Dental Excellence",
+        location: "Medical District",
+        category: "Healthcare",
+        story: "A modern dental practice offering top-quality care but struggling to stand out in a saturated market of established competitors.",
+        challenge: "Poor online presence, lack of patient reviews, and difficulty showcasing their modern facility and advanced treatments.",
+        solution: "Created an optimized GBP with virtual tour, comprehensive service listings, and implemented a patient review generation system.",
+        images: {
+          before: 'img/businessCategory.png',
+          after: 'img/storeFrontPage.png'
+        },
+        results: {
+          profileViews: "+423%",
+          customerCalls: "+167%",
+          rating: "4.3 → 4.9",
+          ranking: "#15 → #3"
+        }
+      }
+    ];
+
+    let currentCaseStudy = 0;
+    let currentImageState = 'before';
+
+    function updateCaseStudy() {
+      const study = caseStudies[currentCaseStudy];
+      
+      // Update header
+      document.querySelector('.case-study-card h1').textContent = study.title;
+      document.querySelector('.location-info').innerHTML = 
+        `<i class="bi bi-geo-alt"></i> ${study.location} &nbsp; • &nbsp; ${study.category}`;
+      
+      // Update content
+      document.querySelectorAll('.story-section p')[0].textContent = study.story;
+      document.querySelectorAll('.story-section p')[1].textContent = study.challenge;
+      document.querySelectorAll('.story-section p')[2].textContent = study.solution;
+      
+      // Update image
+      document.getElementById('caseStudyImage').src = study.images[currentImageState];
+      
+      // Update results
+      document.querySelector('.profile-views h3').textContent = study.results.profileViews;
+      document.querySelector('.customer-calls h3').textContent = study.results.customerCalls;
+      document.querySelector('.rating h3').textContent = study.results.rating;
+      document.querySelector('.ranking h3').textContent = study.results.ranking;
+      
+      // Update carousel counter
+      document.querySelector('.carousel-controls span').textContent = `${currentCaseStudy + 1} / ${caseStudies.length}`;
+
+      // Add fade effect
+      const card = document.querySelector('.case-study-card');
+      card.style.opacity = '0';
+      setTimeout(() => {
+        card.style.opacity = '1';
+      }, 50);
+    }
+
+    function switchImage(state) {
+      currentImageState = state;
+      const image = document.getElementById('caseStudyImage');
+      const tag = document.getElementById('imageTag');
+      const buttons = document.querySelectorAll('.btn-toggle');
+
+      // Update image source and tag
+      image.src = caseStudies[currentCaseStudy].images[state];
+      tag.textContent = state.toUpperCase();
+      
+      // Update button states
+      buttons.forEach(button => {
+        if (button.textContent.toLowerCase().includes(state)) {
+          button.classList.add('active');
+        } else {
+          button.classList.remove('active');
+        }
+      });
+
+      // Add fade effect
+      image.style.opacity = '0';
+      setTimeout(() => {
+        image.style.opacity = '1';
+      }, 50);
+    }
+
+    // Initialize carousel controls
+    document.addEventListener('DOMContentLoaded', () => {
+      const prevButton = document.getElementById('prevButton');
+      const nextButton = document.getElementById('nextButton');
+      
+      function goToPrevious() {
+        currentCaseStudy = (currentCaseStudy - 1 + caseStudies.length) % caseStudies.length;
+        updateCaseStudy();
+      }
+
+      function goToNext() {
+        currentCaseStudy = (currentCaseStudy + 1) % caseStudies.length;
+        updateCaseStudy();
+      }
+      
+      prevButton.addEventListener('click', goToPrevious);
+      nextButton.addEventListener('click', goToNext);
+
+      // Initialize the first case study
+      updateCaseStudy();
+
+      // Add transitions
+      const caseStudyCard = document.querySelector('.case-study-card');
+      caseStudyCard.style.transition = 'opacity 0.3s ease';
+      document.getElementById('caseStudyImage').style.transition = 'opacity 0.3s ease';
+
+      // Add keyboard navigation
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+          prevButton.click();
+        } else if (e.key === 'ArrowRight') {
+          nextButton.click();
+        }
+      });
+
+      // Add touch swipe support for mobile
+      let touchStartX = 0;
+      let touchEndX = 0;
+      
+      caseStudyCard.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, false);
+      
+      caseStudyCard.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+      }, false);
+      
+      function handleSwipe() {
+        const swipeThreshold = 50;
+        if (touchEndX < touchStartX - swipeThreshold) {
+          // Swipe left
+          nextButton.click();
+        }
+        if (touchEndX > touchStartX + swipeThreshold) {
+          // Swipe right
+          prevButton.click();
+        }
+      }
+    });
+  </script>
+</body>
+</html>
