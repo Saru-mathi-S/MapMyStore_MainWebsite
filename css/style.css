@@ -887,6 +887,10 @@ background-position: center;
     .card.solution {
       background: linear-gradient(160deg, #132038, #493fa4);
     }
+    .card.compare {
+      background: linear-gradient(160deg, #183c4a, #418bad);
+      color:white
+    }
     .badge {
       position: absolute;
       top: -10px;
@@ -900,6 +904,7 @@ background-position: center;
     .urgent { background: #e84157; color: white; }
     .critical-badge { background: #ff8c00; color: white; }
     .solution-badge { background: #6355ca; color: white; }
+    .compare-badge { background: #3ba9ce; color: white; }
     .card-icon {
       width: 56px;
   height: 56px;
