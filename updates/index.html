@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MapMyStore - News & Updates</title>
+
+    <!-- Favicon -->
+    <link href="../img/mms_logo.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Libraries CSS -->
+    <link href="../lib/animate/animate.min.css" rel="stylesheet">
+    <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+<style>
+    :root {
+        --primary: #6948c7;
+        --secondary: #a75ce4;
+        --dark: #091E3E;
+        --light: #ffffff;
+    }
+
+    body {
+        font-family: 'Merriweather', serif;
+        background: linear-gradient(135deg, rgb(250, 247, 251), rgba(233, 213, 255, 0.9));
+        color: var(--dark);
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+    }
+
+    /* Header Section */
+    .news-header {
+        text-align: center;
+        padding: 80px 20px 40px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .news-header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, rgba(105, 72, 199, 0.1), rgba(167, 92, 228, 0.1));
+        z-index: -1;
+    }
+
+    .news-header .sub-heading {
+        font-family: 'Jost', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 1rem;
+        color: var(--primary);
+        margin-bottom: 12px;
+        font-weight: 600;
+    }
+
+    .news-header h1 {
+        font-family: 'Jost', sans-serif;
+        font-size: 3rem;
+        margin: 0;
+        font-weight: 700;
+        background: linear-gradient(to right, var(--primary), var(--secondary));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: var(--primary);
+        margin-bottom: 20px;
+    }
+
+    .news-header .intro {
+        max-width: 780px;
+        margin: 0 auto;
+        font-size: 1.1rem;
+        color: #555;
+        line-height: 1.8;
+    }
+
+    /* Grid Layout */
+    .news-grid {
+        max-width: 1200px;
+        margin: 40px auto 80px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        gap: 30px;
+        padding: 0 20px;
+    }
+
+    /* Cards */
+    .news-card {
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 20px;
+        padding: 30px;
+        text-decoration: none;
+        color: var(--dark);
+        border: 1px solid rgba(111, 66, 193, 0.1);
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .news-card::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(105, 72, 199, 0.1), rgba(167, 92, 228, 0.1));
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .news-card:hover {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 15px 30px rgba(111, 66, 193, 0.15);
+    }
+
+    .news-card:hover::after {
+        opacity: 1;
+    }
+
+    .card-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .card-icon {
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        color: white;
+        font-size: 1.2rem;
+        width: 50px;
+        height: 50px;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 2;
+        box-shadow: 0 5px 15px rgba(111, 66, 193, 0.2);
+    }
+
+    .card-date {
+        font-family: 'Heebo', sans-serif;
+        font-size: 1rem;
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .card-tag {
+        font-family: 'Jost', sans-serif;
+        font-size: 0.85rem;
+        padding: 6px 12px;
+        border-radius: 25px;
+        display: inline-block;
+        background: linear-gradient(to right, var(--primary), var(--secondary));
+        color: white;
+        margin-bottom: 12px;
+        font-weight: 500;
+        position: relative;
+        z-index: 2;
+        box-shadow: 0 3px 10px rgba(111, 66, 193, 0.15);
+    }
+
+    .card-title {
+        font-family: 'Jost', sans-serif;
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin: 12px 0 15px;
+        color: var(--dark);
+        position: relative;
+        z-index: 2;
+        transition: color 0.3s ease;
+    }
+
+    .news-card:hover .card-title {
+        color: var(--primary);
+    }
+
+    .card-text {
+        color: #555;
+        font-size: 1rem;
+        line-height: 1.8;
+        position: relative;
+        z-index: 2;
+    }
+
+    .back-home {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: linear-gradient(to bottom right, var(--primary), var(--secondary));
+        color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        box-shadow: 0 4px 15px rgba(111, 66, 193, 0.2);
+        transition: all 0.3s ease;
+        z-index: 1000;
+    }
+
+    .back-home:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(111, 66, 193, 0.3);
+        color: white;
+    }
+
+    @media (max-width: 991px) {
+        .news-header {
+            padding: 60px 20px 30px;
+        }
+
+        .news-header h1 {
+            font-size: 2.5rem;
+        }
+
+        .news-grid {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px auto 60px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .news-header h1 {
+            font-size: 2rem;
+        }
+
+        .news-header .intro {
+            font-size: 1rem;
+        }
+
+        .news-grid {
+            grid-template-columns: 1fr;
+            padding: 0 15px;
+        }
+
+        .news-card {
+            padding: 25px;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+        }
+    }
+
+</style>
+</head>
+
+<body>
+
+<section class="news-header wow fadeIn" data-wow-delay="0.1s">
+    <p class="sub-heading">Stay Updated</p>
+    <h1>Latest News & Updates</h1>
+    <p class="intro">
+        Stay informed about the latest Google Business Profile updates, industry news, and best practices 
+        to keep your business visible and competitive in the digital landscape.
+    </p>
+</section>
+
+<section class="news-grid">
+    <!-- CARD 1 -->
+    <a href="news1.html" class="news-card wow fadeInUp" data-wow-delay="0.1s">
+        <div class="card-top">
+            <div class="card-icon"><i class="fa-solid fa-clock"></i></div>
+            <div class="card-date"><i class="far fa-calendar-alt"></i> Nov 9, 2025</div>
+        </div>
+        <span class="card-tag">Latest Update</span>
+        <h3 class="card-title">Google Tests Post Scheduling in Business Profiles</h3>
+        <p class="card-text">Google introduces automated post scheduling directly in Google Business Profile, revolutionizing how businesses maintain their online presence. Read to Learn more about it</p>
+    </a>
+
+    <!-- CARD 2 -->
+    <a href="#" class="news-card wow fadeInUp" data-wow-delay="0.2s">
+        <div class="card-top">
+            <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <div class="card-date"><i class="far fa-calendar-alt"></i> Nov 8, 2025</div>
+        </div>
+        <span class="card-tag">Google Update</span>
+        <h3 class="card-title">Enhanced Performance Insights Released</h3>
+        <p class="card-text">New analytics features provide deeper insights into customer interactions, search visibility, and engagement metrics for your business profile...</p>
+    </a>
+
+    <!-- CARD 3 -->
+    <!-- <a href="#" class="news-card wow fadeInUp" data-wow-delay="0.3s">
+        <div class="card-icon"><i class="fa-solid fa-bullhorn"></i></div>
+        <div class="card-date"><i class="far fa-calendar-alt"></i> Nov 5, 2025</div>
+        <span class="card-tag">Industry News</span>
+        <h3 class="card-title">Local Search Algorithm Update</h3>
+        <p class="card-text">Major changes to local search rankings emphasize business profile completeness and review authenticity. Learn how to adapt your strategy...</p>
+    </a> -->
+
+   
+</section>
+
+<!-- Back to Home Button -->
+<a href="../index.html" class="back-home wow fadeIn" data-wow-delay="0.1s">
+    <i class="fas fa-home"></i>
+</a>
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../lib/wow/wow.min.js"></script>
+<script src="../lib/easing/easing.min.js"></script>
+<script src="../lib/waypoints/waypoints.min.js"></script>
+<script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+
+<!-- Template Javascript -->
+<script src="../js/main.js"></script>
+
+<script>
+    // Initialize WOW.js
+    new WOW().init();
+</script>
+
+</body>
+</html>
