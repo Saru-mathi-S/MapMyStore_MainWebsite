@@ -45,5 +45,11 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://www.mapmystore.com/blog/google-business-profile-video-verification-guide/index.html</loc>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>Monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   
 </urlset>
